@@ -1,10 +1,12 @@
 header {
   background: var(--qwik-purple);
 }
+
 header {
   display: flex;
   background: white;
-  border-bottom: 10px solid var(--qwik-dark-purple);
+  /* border-bottom: 10px solid var(--qwik-dark-purple); */
+  margin-left: 6rem;
 }
 
 header .logo a {
