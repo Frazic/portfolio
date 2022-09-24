@@ -6,7 +6,7 @@ header {
   display: flex;
   background: white;
   /* border-bottom: 10px solid var(--qwik-dark-purple); */
-  margin-left: 6rem;
+  margin-left: var(--body-padding);
 }
 
 header .logo a {

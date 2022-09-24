@@ -17,6 +17,14 @@
     z-index: 999;
 }
 
+.navbar:hover {
+    width: 16rem;
+}
+
+.navbar:hover .link-text {
+    display: block;
+}
+
 .navbar-nav {
     list-style: none;
     padding: 0;
@@ -31,7 +39,6 @@
     width: 100%;
 }
 
-/* Could be used for Theme button */
 .nav-item:last-child {
     margin-top: auto;
 }
@@ -61,14 +68,6 @@
     width: 2rem;
     min-width: 2rem;
     margin: 0 1.5rem;
-}
-
-.navbar:hover {
-    width: 16rem;
-}
-
-.navbar:hover .link-text {
-    display: block;
 }
 
 .fa-primary {
@@ -147,7 +146,7 @@
 }
 
 /* Large screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
   .navbar {
     top: 0;
     width: 5rem;

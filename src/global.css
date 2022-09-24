@@ -11,6 +11,8 @@
   --qwik-light-blue: #18b6f6;
   --qwik-light-purple: #ac7ff4;
   --qwik-dark-purple: #713fc2;
+  --navbar-width: 5rem;
+  --body-padding: calc(var(--navbar-width) + 1rem);
 }
 
 body {
@@ -39,8 +41,9 @@ h2 {
 }
 
 section {
-  margin-left: 5rem; /* To allow for navbar left*/
-  padding: 1rem;
+  /* margin-left: 5rem; To allow for navbar left */
+  /* padding: 1rem; */
+  padding: 0 1rem 0 var(--body-padding);
   /* border-bottom: 10px solid var(--qwik-dark-blue); */
 }
 
@@ -137,4 +140,11 @@ a.mindblow:hover {
   border-bottom-width: 0px;
   margin-bottom: 4px;
   transform: translateY(4px);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  :root {
+    --body-padding: 1rem;
+  }
 }
