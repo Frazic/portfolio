@@ -8,6 +8,7 @@ export default component$(() => {
         <nav class="navbar">
             <ul class="navbar-nav">
                 <li class="logo">
+                    {/* TODO On mobile, this refreshes the page when trying to open the menu :c */}
                     <a href="/" class="nav-link">
                         <span class="link-text logo-text">Frazic</span>
                         <svg
@@ -152,7 +153,7 @@ export default component$(() => {
                     </a>
                 </li>
 
-                <li class="nav-item" id="themeButton">
+                {/* <li class="nav-item" id="themeButton">
                     <a href="#" class="nav-link">
                         <svg
                             class="theme-icon"
@@ -206,7 +207,7 @@ export default component$(() => {
                         </svg>
                         <span class="link-text">Theme</span>
                     </a>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );
