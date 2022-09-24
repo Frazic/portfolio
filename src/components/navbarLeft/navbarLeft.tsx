@@ -8,12 +8,13 @@ export default component$(() => {
         <nav class="navbar">
             <ul class="navbar-nav">
                 <li class="logo">
-                    {/* TODO On mobile, this refreshes the page when trying to open the menu :c */}
-                    <a href="/" class="nav-link">
-                        <span class="link-text logo-text">Frazic</span>
+                    <div class='nav-link'>
+                        <a href="/" className='nav-link'>
+                            <span class="link-text logo-text">Josh</span>
+                        </a>
                         <svg
                             aria-hidden="true"
-                            focusable="false"
+                            focusable="true"
                             data-prefix="fad"
                             data-icon="angle-double-right"
                             role="img"
@@ -34,7 +35,7 @@ export default component$(() => {
                                 ></path>
                             </g>
                         </svg>
-                    </a>
+                    </div>
                 </li>
 
                 <li class="nav-item">
