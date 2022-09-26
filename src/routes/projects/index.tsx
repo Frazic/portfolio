@@ -1,11 +1,9 @@
 import { component$ } from "@builder.io/qwik";
 
-export const Links = component$(() => {
+export default component$(() => {
     return (
         <div>
-            <h1>
-                Projects
-            </h1>
+            <h1>Projects</h1>
         </div>
     );
 });
