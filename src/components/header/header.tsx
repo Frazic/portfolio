@@ -6,7 +6,7 @@ export default component$(() => {
 
   return (
     <header>
-      Joshua Bruylant's Portfolio
+      <div className="title">Joshua Bruylant's Portfolio</div>
     </header>
   );
 });

@@ -1,12 +1,10 @@
 header {
-  background: var(--qwik-purple);
-}
-
-header {
   display: flex;
-  background: white;
-  /* border-bottom: 10px solid var(--qwik-dark-purple); */
-  margin-left: var(--body-padding);
+  background: var(--color-purple-mid);
+  border-bottom: 2px solid var(--color-purple-light);
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 header .logo a {
@@ -36,4 +34,10 @@ header li a {
 
 header li a:hover {
   text-decoration: underline;
+}
+
+.title {
+  margin-left: var(--body-padding);
+  font-size: larger;
+  font-weight: bold;
 }

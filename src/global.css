@@ -9,13 +9,37 @@
 :root {
   --navbar-width: 5rem;
   --body-padding: calc(var(--navbar-width) + 1rem);
+
+  --font-weight-default: 300;
+  --font-weight-mid: 400;
+
+  /* Colours */
+  /* Made using https://paletton.com */
+
+  /* Purple tones */
+  --color-purple-lightest: #C3A5CB;
+  --color-purple-light: #743D83;
+  --color-purple-mid: #420E51;
+  --color-purple-dark: #1D0125;
+  --color-purple-darkest: #020003;
+
+  /* Green tones */
+  --color-green-lightest: #D0EDA9;
+  --color-green-light: #82AD47;
+  --color-green-mid: #477010;
+  --color-green-dark: #213900;
+  --color-green-darkest: #070C00;
 }
 
+
+
 body {
-  /* background-color: #fafafa; */
-  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-purple-darkest);
+  color: var(--color-purple-lightest);
+  /* font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif; */
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: var(--font-weight-mid);
   margin: 0;
-  /* padding: 20px 20px 40px 20px; */
 }
 
 main {
@@ -29,7 +53,9 @@ main {
 
 h1,
 h2 {
+  padding: 10px 0 0 0;
   margin: 0 0 5px 0;
+  font-weight: var(--font-weight-default);
 }
 
 section {
