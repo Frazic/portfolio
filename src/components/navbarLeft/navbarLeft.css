@@ -5,6 +5,10 @@
     --bg-primary: #232323;
     --bg-secondary: #141414;
     --transition-speed: 600ms;
+
+    --svg-colour-primary: #df49a6;
+    --svg-colour-secondary: #ff7eee;
+    --svg-colour-tertiary: #d67eff;
 }
 
 /* Navbar */
@@ -58,9 +62,9 @@
 }
 
 .nav-link svg {
-    width: 2rem;
-    min-width: 2rem;
-    margin: 0 1.5rem;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    margin: 0 1rem;
 }
 
 /* Link text */
@@ -110,17 +114,22 @@
 }
 
 /* Colours */
-.fa-primary {
-    color: #ff7eee;
+.svg-colour-primary {
+  color: var(--svg-colour-primary);
 }
 
-.fa-secondary {
-    color: #df49a6;
+.svg-colour-secondary {
+  color: var(--svg-colour-secondary);
 }
 
-.fa-primary,
-.fa-secondary {
-    transition: var(--transition-speed);
+.svg-colour-tertiary {
+  color: var(--svg-colour-tertiary);
+}
+
+.svg-colour-primary,
+.svg-colour-secondary,
+.svg-colour-tertiary {
+  transition: var(--transition-speed);
 }
 
 /* Small screens */
