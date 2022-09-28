@@ -155,21 +155,25 @@
     height: 100%;
   }
 
+  .nav-link {
+    filter: grayscale(0%) opacity(0.75);
+  }
+
   .logo {
       display: none;
     }
 
-    .navbar-nav {
-        flex-direction: row;
-    }
+  .navbar-nav {
+      flex-direction: row;
+  }
 
-    .nav-link {
-        justify-content: center;
-    }
+  .nav-link {
+      justify-content: center;
+  }
 
-    .nav-item:last-child {
-      margin-bottom: 50%;
-    }
+  .nav-item:last-child {
+    margin-bottom: 50%;
+  }
 
   main {
     margin: 0;
