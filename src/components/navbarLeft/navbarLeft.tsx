@@ -47,6 +47,112 @@ export default component$(() => {
                             data-prefix="lgtb"
                             data-icon="lightbulb"
                             role="img"
+                            viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path
+                                    fill="currentColor"
+                                    className="svg-colour-secondary"
+                                    style="stroke-width:0.0639315"
+                                    d="m 18.946974,36.953925 c -0.03173,-1.84982 -0.08006,-2.175637 -0.468408,-3.157627 -0.345584,-0.873859 -0.681651,-1.352595 -1.713462,-2.440871 -0.883454,-0.931802 -1.459501,-1.740652 -1.939136,-2.722825 -0.448267,-0.917941 -0.715445,-1.702734 -0.911954,-2.67872 -0.207791,-1.032026 -0.207122,-2.895313 0.0014,-3.94164 0.828158,-4.155212 3.979527,-7.394584 8.058977,-8.284026 1.86284,-0.406155 3.783761,-0.284221 5.612194,0.356244 3.535569,1.238443 6.143294,4.315646 6.839346,8.070656 0.180421,0.973323 0.167337,2.831739 -0.02674,3.798766 -0.196806,0.980609 -0.463894,1.764296 -0.912929,2.67872 -0.486451,0.990615 -1.061532,1.798712 -1.937697,2.722825 -1.031123,1.087549 -1.29816,1.46537 -1.691228,2.392846 -0.39759,0.938145 -0.45579,1.319325 -0.489451,3.205652 l -0.03062,1.715571 h -5.180494 -5.180443 z"
+                                    id="path281" />
+                            </g>
+                            <g
+                                class="fa-group">
+                                <path
+                                    fill="currentColor"
+                                    class="svg-colour-primary"
+                                    d="M29,40H19a2,2,0,0,1-2-2V35.6a4.07,4.07,0,0,0-1.28-2.92A11.89,11.89,0,0,1,12,24h2a9.9,9.9,0,0,0,3.1,7.23A6.06,6.06,0,0,1,19,35.6V38H29V35.6a6.06,6.06,0,0,1,1.9-4.37A9.9,9.9,0,0,0,34,24h2a11.89,11.89,0,0,1-3.72,8.68A4.07,4.07,0,0,0,31,35.6V38A2,2,0,0,1,29,40Z"
+                                    id="path18" />
+                                <path
+                                    fill="currentColor"
+                                    class="svg-colour-primary"
+                                    d="M36,24H34a10,10,0,0,0-20,0H12a12,12,0,0,1,24,0Z"
+                                    id="path20" />
+                                <rect
+                                    fill="currentColor"
+                                    class="svg-colour-primary"
+                                    x="19"
+                                    y="46"
+                                    width="10"
+                                    height="2"
+                                    id="rect24" />
+                                <rect
+                                    fill="currentColor"
+                                    class="svg-colour-primary"
+                                    x="18"
+                                    y="42"
+                                    width="12"
+                                    height="2"
+                                    id="rect26" />
+                                <rect
+                                    fill="currentColor"
+                                    class="svg-colour-tertiary"
+                                    x="40"
+                                    y="23"
+                                    width="8"
+                                    height="2"
+                                    id="rect32" />
+                                <rect
+                                    fill="currentColor"
+                                    class="svg-colour-tertiary"
+                                    y="23"
+                                    width="8"
+                                    height="2"
+                                    id="rect34" />
+                                <rect
+                                    fill="currentColor"
+                                    class="svg-colour-tertiary"
+                                    x="34.76"
+                                    y="8"
+                                    width="8.49"
+                                    height="2"
+                                    transform="translate(5.06 30.21) rotate(-45)"
+                                    id="rect36" />
+                                <rect
+                                    fill="currentColor"
+                                    class="svg-colour-tertiary"
+                                    x="8"
+                                    y="4.76"
+                                    width="2"
+                                    height="8.49"
+                                    transform="translate(-3.73 9) rotate(-45)"
+                                    id="rect38" />
+                                <rect
+                                    fill="currentColor"
+                                    class="svg-colour-tertiary"
+                                    x="4.76"
+                                    y="38"
+                                    width="8.49"
+                                    height="2"
+                                    transform="translate(-24.94 17.79) rotate(-45)"
+                                    id="rect40" />
+                                <rect
+                                    fill="currentColor"
+                                    class="svg-colour-tertiary"
+                                    x="38"
+                                    y="34.76"
+                                    width="2"
+                                    height="8.49"
+                                    transform="translate(-16.15 39) rotate(-45)"
+                                    id="rect42" />
+                                <rect
+                                    fill="currentColor"
+                                    class="svg-colour-tertiary"
+                                    x="23"
+                                    width="2"
+                                    height="8"
+                                    id="rect44" />
+                            </g>
+                        </svg>
+
+
+                        {/* <svg
+                            aria-hidden="true"
+                            focusable="true"
+                            data-prefix="lgtb"
+                            data-icon="lightbulb"
+                            role="img"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 48 48"
                         >
@@ -66,7 +172,7 @@ export default component$(() => {
                                 <rect fill="currentColor" class="svg-colour-tertiary" x="38" y="34.76" width="2" height="8.49" transform="translate(-16.15 39) rotate(-45)" />
                                 <rect fill="currentColor" class="svg-colour-tertiary" x="23" width="2" height="8" />
                             </g>
-                        </svg>
+                        </svg> */}
                         <span class="link-text">Projects</span>
                     </a>
                 </li>
