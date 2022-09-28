@@ -282,9 +282,9 @@ export default component$(() => {
                     </a>
                 </li>
 
-                {/* OTHERS */}
+                {/* ABOUT */}
                 <li class="nav-item">
-                    <a href="/others" class="nav-link">
+                    <a href="/about" class="nav-link">
                         <svg
                             aria-hidden="true"
                             focusable="false"

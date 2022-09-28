@@ -4,7 +4,7 @@ export default component$(() => {
     return (
         <div>
             <h1>
-                Others
+                About
             </h1>
         </div>
     );
