@@ -275,7 +275,7 @@ export default component$(() => {
                                 <path d="M215.92,352.709c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h80.161c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5H215.92  z" />
                             </g>
                         </svg>
-                        <span class="link-text">Others</span>
+                        <span class="link-text">About</span>
                     </a>
                 </li>
 
