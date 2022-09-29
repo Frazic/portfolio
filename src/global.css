@@ -7,6 +7,8 @@
  */
 
 :root {
+  font-size: 20px;
+
   --navbar-width: 5rem;
   --body-padding: calc(var(--navbar-width) + 1rem);
 
@@ -20,8 +22,8 @@
   --color-purple-lightest: #C3A5CB;
   --color-purple-light: #743D83;
   --color-purple-mid: #420E51;
-  --color-purple-dark: #1D0125;
-  --color-purple-darkest: #020003;
+  --color-purple-dark: #23232e;
+  --color-purple-darkest: #141414;
 
   /* Green tones */
   --color-green-lightest: #D0EDA9;

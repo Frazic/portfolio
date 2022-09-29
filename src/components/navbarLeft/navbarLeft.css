@@ -1,11 +1,5 @@
 :root {
-    font-size: 20px;
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #232323;
-    --bg-secondary: #141414;
     --transition-speed: 600ms;
-
     --svg-colour-primary: #df49a6;
     --svg-colour-secondary: #ff7eee;
     --svg-colour-tertiary: #d67eff;
@@ -17,7 +11,7 @@
     width: var(--navbar-width);
     height: 100vh;
     position: fixed;
-    background-color: var(--bg-primary);
+    background-color: var(--color-purple-dark);
     transition: width 200ms ease;
     overflow: scroll;
     z-index: 99;
@@ -49,7 +43,7 @@
     display: flex;
     align-items: center;
     height: 5rem;
-    color: var(--text-primary);
+    color: var(--color-green-lightest);
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: var(--transition-speed);
@@ -57,8 +51,7 @@
 
 .nav-link:hover {
     filter: grayscale(0%) opacity(1);
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
+    background: var(--color-purple-darkest);
 }
 
 .nav-link svg {
@@ -83,8 +76,8 @@
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-align: center;
-    color: var(--text-secondary);
-    background: var(--bg-secondary);
+    color: var(--color-green-lightest);
+    background: var(--color-purple-darkest);
     font-size: 1.5rem;
     letter-spacing: 0.3ch;
     width: 100%;

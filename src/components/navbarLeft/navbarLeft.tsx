@@ -9,7 +9,7 @@ export default component$(() => {
             <ul class="navbar-nav">
                 <li class="logo">
                     <div class='nav-link'>
-                        <a href="/" className='nav-link svg-colour-primary svg-colour-secondary svg-colour-tertiary'>
+                        <a href="/" className='nav-link'>
                             <span class="link-text logo-text">Josh</span>
                         </a>
                         <svg
