@@ -1,11 +1,176 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStyles$ } from "@builder.io/qwik";
 import { DocumentHead } from "@builder.io/qwik-city";
+import styles from "./projects.css";
 
 export default component$(() => {
+    useStyles$(styles);
+
     return (
         <div>
             <h1>Projects</h1>
-            <p>In here will go the swanky cards, one for each project</p>
+            <section className="card-list">
+                <article className="card">
+                    <header className="card-header">
+                        <p>01 May 1996</p>
+                        <h2>Josh was born!</h2>
+                    </header>
+
+                    <div className="card-author">
+                        <a className="author-avatar" href="#">
+                            <img src="avatar.png" alt="avatar" />
+                        </a>
+                        <svg class="half-circle" viewBox="0 0 106 57">
+                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                        </svg>
+
+                        <div className="author-name">
+                            <div className="author-name-prefix">Dr.</div>
+                            Frazic
+                        </div>
+                    </div>
+
+                    <div className="tags">
+                        <a href="#">birth</a>
+                        <a href="#">lift</a>
+                        <a href="#">boi</a>
+                    </div>
+                </article>
+
+                <article className="card">
+                    <header className="card-header">
+                        <p>Some time during his life</p>
+                        <h2>Cool project name</h2>
+                    </header>
+
+                    <div className="card-author">
+                        <a className="author-avatar" href="#">
+                            <img src="avatar.png" alt="avatar" />
+                        </a>
+                        <svg class="half-circle" viewBox="0 0 106 57">
+                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                        </svg>
+
+                        <div className="author-name">
+                            <div className="author-name-prefix">Naval Group</div>
+                            Josh Bruylant
+                        </div>
+                    </div>
+
+                    <div className="tags">
+                        <a href="#">learning</a>
+                        <a href="#">software</a>
+                        <a href="#">cool</a>
+                    </div>
+                </article>
+
+                <article className="card">
+                    <header className="card-header">
+                        <p>Some time during his life</p>
+                        <h2>Cool project name</h2>
+                    </header>
+
+                    <div className="card-author">
+                        <a className="author-avatar" href="#">
+                            <img src="avatar.png" alt="avatar" />
+                        </a>
+                        <svg class="half-circle" viewBox="0 0 106 57">
+                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                        </svg>
+
+                        <div className="author-name">
+                            <div className="author-name-prefix">Naval Group</div>
+                            Josh Bruylant
+                        </div>
+                    </div>
+
+                    <div className="tags">
+                        <a href="#">learning</a>
+                        <a href="#">software</a>
+                        <a href="#">cool</a>
+                    </div>
+                </article>
+
+                <article className="card">
+                    <header className="card-header">
+                        <p>Some time during his life</p>
+                        <h2>Cool project name</h2>
+                    </header>
+
+                    <div className="card-author">
+                        <a className="author-avatar" href="#">
+                            <img src="avatar.png" alt="avatar" />
+                        </a>
+                        <svg class="half-circle" viewBox="0 0 106 57">
+                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                        </svg>
+
+                        <div className="author-name">
+                            <div className="author-name-prefix">Naval Group</div>
+                            Josh Bruylant
+                        </div>
+                    </div>
+
+                    <div className="tags">
+                        <a href="#">learning</a>
+                        <a href="#">software</a>
+                        <a href="#">cool</a>
+                    </div>
+                </article>
+
+                <article className="card">
+                    <header className="card-header">
+                        <p>Some time during his life</p>
+                        <h2>Cool project name</h2>
+                    </header>
+
+                    <div className="card-author">
+                        <a className="author-avatar" href="#">
+                            <img src="avatar.png" alt="avatar" />
+                        </a>
+                        <svg class="half-circle" viewBox="0 0 106 57">
+                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                        </svg>
+
+                        <div className="author-name">
+                            <div className="author-name-prefix">Naval Group</div>
+                            Josh Bruylant
+                        </div>
+                    </div>
+
+                    <div className="tags">
+                        <a href="#">learning</a>
+                        <a href="#">software</a>
+                        <a href="#">cool</a>
+                    </div>
+                </article>
+
+                <article className="card">
+                    <header className="card-header">
+                        <p>Some time during his life</p>
+                        <h2>Cool project name</h2>
+                    </header>
+
+                    <div className="card-author">
+                        <a className="author-avatar" href="#">
+                            <img src="avatar.png" alt="avatar" />
+                        </a>
+                        <svg class="half-circle" viewBox="0 0 106 57">
+                            <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                        </svg>
+
+                        <div className="author-name">
+                            <div className="author-name-prefix">Naval Group</div>
+                            Josh Bruylant
+                        </div>
+                    </div>
+
+                    <div className="tags">
+                        <a href="#">learning</a>
+                        <a href="#">software</a>
+                        <a href="#">cool</a>
+                    </div>
+                </article>
+            </section>
         </div>
     );
 });
