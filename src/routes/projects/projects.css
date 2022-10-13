@@ -58,6 +58,7 @@
 }
 
 .card-header h2 {
+    color: var(--color-purple-lightest);
     font-size: 1.5em;
     margin: 0;
     padding: 0;
@@ -74,6 +75,11 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+.card-header a {
+    color: var(--color-purple-lightest);
+    text-decoration: none;
 }
 
 .card-author {

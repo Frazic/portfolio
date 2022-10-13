@@ -12,7 +12,7 @@ export default component$(() => {
                 <article className="card">
                     <header className="card-header">
                         <p>01 May 1996</p>
-                        <h2>Josh was born!</h2>
+                        <h2><a href="projects/born">Josh was born!</a></h2>
                     </header>
 
                     <div className="card-author">

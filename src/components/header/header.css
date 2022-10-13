@@ -1,10 +1,16 @@
 header {
   display: flex;
+  color: var(--color-purple-lightest);
   background: var(--color-purple-mid);
   border-bottom: 2px solid var(--color-purple-light);
   height: 50px;
   display: flex;
   align-items: center;
+}
+
+header a {
+  color: var(--color-purple-lightest);
+  text-decoration: none;
 }
 
 header .logo a {
