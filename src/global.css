@@ -176,11 +176,15 @@ footer a:hover {
   margin: auto;
   padding: 10px;
   gap: 10px;
-  color: var(--color-purple-light);
+  color: var(--color-green-light);
   border-style: solid;
-  border-color: green;
+  border-color: var(--color-purple-mid);
   border-radius: 10%;
-  transition: var(--transition-speed);
+
+  opacity: 0;
+  animation: slideInFromLeft var(--transition-speed) forwards;
+  transition: all var(--transition-speed) ease;
+  animation-delay: calc(var(--order) * var(--transition-speed));
 }
 
 .descriptors ul>svg {
@@ -215,5 +219,16 @@ footer a:hover {
   .home-page-layout {
     flex-direction: row;
     height: auto;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+
+  30%, 100% {
+    opacity: 1;
   }
 }

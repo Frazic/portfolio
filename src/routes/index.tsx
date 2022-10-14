@@ -10,7 +10,7 @@ export default component$(() => {
 
         <div className='text-centered'>
           <li className='descriptors'>
-            <ul>
+            <ul style={"--order: 1"}>
               <svg
                 aria-hidden="true"
                 focusable="true"
@@ -33,7 +33,7 @@ export default component$(() => {
               </svg>
               <span>Curious</span>
             </ul>
-            <ul>
+            <ul style={"--order: 2"}>
               <svg
                 aria-hidden="true"
                 focusable="true"
@@ -56,7 +56,7 @@ export default component$(() => {
               </svg>
               <span>Igenious</span>
             </ul>
-            <ul>
+            <ul style={"--order: 3"}>
               <svg
                 aria-hidden="true"
                 focusable="true"
