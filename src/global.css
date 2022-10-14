@@ -170,6 +170,7 @@ footer a:hover {
 }
 
 .descriptors ul {
+  --animation-speed: 500ms;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -182,9 +183,9 @@ footer a:hover {
   border-radius: 10%;
 
   opacity: 0;
-  animation: slideInFromLeft var(--transition-speed) forwards;
-  transition: all var(--transition-speed) ease;
-  animation-delay: calc(var(--order) * var(--transition-speed));
+  animation: slideInFromLeft var(--animation-speed) forwards;
+  transition: all var(--animation-speed) ease;
+  animation-delay: calc(var(--order) * var(--animation-speed));
 }
 
 .descriptors ul>svg {

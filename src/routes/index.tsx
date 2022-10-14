@@ -54,7 +54,7 @@ export default component$(() => {
                   ></path>
                 </g>
               </svg>
-              <span>Igenious</span>
+              <span>Ingenious</span>
             </ul>
             <ul style={"--order: 3"}>
               <svg
