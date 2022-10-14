@@ -1,5 +1,4 @@
 :root {
-    --transition-speed: 600ms;
     --svg-colour-primary: #df49a6;
     --svg-colour-secondary: #ff7eee;
     --svg-colour-tertiary: #d67eff;
@@ -7,6 +6,7 @@
 
 /* Navbar */
 .navbar {
+    --transition-speed: 600ms;
     top: 0;
     width: var(--navbar-width);
     height: 100vh;

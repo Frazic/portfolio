@@ -9,7 +9,7 @@ export default component$(() => {
         <div>
             <h1>Projects</h1>
             <section className="card-list">
-                <article className="card">
+                <article className="card" style={"--order: 0"}>
                     <header className="card-header">
                         <p>01 May 1996</p>
                         <h2><a href="projects/born">Josh was born!</a></h2>
@@ -36,7 +36,7 @@ export default component$(() => {
                     </div>
                 </article>
 
-                <article className="card">
+                <article className="card" style={"--order: 1"}>
                     <header className="card-header">
                         <p>Some time during his life</p>
                         <h2>Cool project name</h2>
@@ -63,7 +63,7 @@ export default component$(() => {
                     </div>
                 </article>
 
-                <article className="card">
+                <article className="card" style={"--order: 2"}>
                     <header className="card-header">
                         <p>Some time during his life</p>
                         <h2>Cool project name</h2>
@@ -90,7 +90,7 @@ export default component$(() => {
                     </div>
                 </article>
 
-                <article className="card">
+                <article className="card" style={"--order: 3"}>
                     <header className="card-header">
                         <p>Some time during his life</p>
                         <h2>Cool project name</h2>
@@ -117,7 +117,7 @@ export default component$(() => {
                     </div>
                 </article>
 
-                <article className="card">
+                <article className="card" style={"--order: 4"}>
                     <header className="card-header">
                         <p>Some time during his life</p>
                         <h2>Cool project name</h2>
@@ -144,7 +144,7 @@ export default component$(() => {
                     </div>
                 </article>
 
-                <article className="card">
+                <article className="card" style={"--order: 5"}>
                     <header className="card-header">
                         <p>Some time during his life</p>
                         <h2>Cool project name</h2>

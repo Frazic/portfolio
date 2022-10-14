@@ -8,6 +8,11 @@
     overflow: unset;
     scroll-behavior: smooth;
     margin-bottom: 5rem;
+
+    opacity: 0;
+    transition: all var(--transition-speed) ease;
+    animation: slideInFromTop var(--transition-speed);
+    animation-fill-mode: forwards;
 }
 
 .card {
@@ -28,7 +33,7 @@
     background-color: var(--color-purple-dark);
     box-shadow: -1em 0 3em #000;
 
-    transition: 0.2s;
+    transition: all var(--transition-speed) ease;
 
     margin: 0;
     scroll-snap-align: start;
@@ -165,13 +170,16 @@
     visibility: visible;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 601px) {
 
     .card-list {
         flex-direction: row;
         font-size: 1.1em;
         overflow-x: scroll;
         overflow-y: hidden;
+        opacity: 0;
+        animation: slideInFromLeft var(--transition-speed);
+        animation-fill-mode: forwards;
     }
 
     .card {
@@ -223,5 +231,29 @@
 
     .card-list::-webkit-scrollbar-track {
         background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
