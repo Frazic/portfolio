@@ -88,6 +88,10 @@ p {
   padding: 0 0 5px 0;
 }
 
+a {
+  color: var(--color-purple-lightest);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 0.25rem;
