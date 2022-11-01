@@ -19,7 +19,6 @@ export const RouterHead = component$(() => {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
       <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
       <meta property="og:site_name" content="Joshua Bruylant's Portfolio" />
       {/* <meta name="twitter:site" content="@Frazic" /> */}
       {/* <meta name="twitter:title" content="Frazic" /> */}

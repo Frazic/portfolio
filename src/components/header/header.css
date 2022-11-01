@@ -4,8 +4,8 @@ header {
   background: var(--color-purple-mid);
   border-bottom: 2px solid var(--color-purple-light);
   height: 50px;
-  display: flex;
   align-items: center;
+  justify-content: center;
   white-space: nowrap;
 }
 
@@ -44,7 +44,15 @@ header li a:hover {
 }
 
 .title {
-  margin-left: var(--body-padding);
-  font-size: larger;
   font-weight: bold;
+}
+
+@media screen and (min-width: 601px) {
+  header {
+    justify-content: left;
+  }
+  .title {
+    margin-left: var(--body-padding);
+    font-size: larger;
+  }
 }

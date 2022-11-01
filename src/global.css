@@ -38,11 +38,6 @@
   --transition-speed: 200ms;
 }
 
-html {
-  height: 100%;
-  min-width: 492px;
-}
-
 body {
   background-color: var(--color-purple-darkest);
   color: var(--color-purple-lightest);
@@ -51,8 +46,8 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-width: 492px;
+  /* height: 100%; */
+  /* min-width: 492px; */
 }
 
 main {
@@ -70,7 +65,7 @@ h1, h2, h3, p {
 
 h1 {
   padding: 0 0 20px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: var(--font-weight-boldest);
 }
 
@@ -157,7 +152,6 @@ footer a:hover {
   flex-direction: column-reverse;
   gap: 1rem;
   align-items: center;
-  min-width: fit-content;
 }
 
 .home-page-photo {
@@ -169,8 +163,7 @@ footer a:hover {
 
 .descriptors {
   display: flex;
-  align-content: center;
-  align-items: stretch;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -178,10 +171,10 @@ footer a:hover {
   --animation-speed: 500ms;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  gap: 10px;
+  width: 7em;
   margin: auto;
   padding: 10px;
-  gap: 10px;
   color: var(--color-green-light);
   border-style: solid;
   border-color: var(--color-purple-mid);
@@ -214,6 +207,10 @@ footer a:hover {
     margin: auto 0 0 var(--body-padding);
   }
 
+  .descriptors {
+    flex-direction: row;
+  }
+
   .descriptors ul {
     filter: grayscale(100%) opacity(0.7);
   }
@@ -229,6 +226,10 @@ footer a:hover {
 }
 
 @media screen and (min-width:1001px) {
+  h1 {
+    font-size: 2em;
+  }
+
   .home-page-layout {
     flex-direction: row;
   }
