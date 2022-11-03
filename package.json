@@ -11,7 +11,7 @@
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build --ssr src/entry.cloudflare-pages.tsx",
     "build.types": "tsc --incremental --noEmit",
-    "dev": "vite --mode ssr",
+    "dev": "npm run images && vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
@@ -19,7 +19,8 @@
     "preview": "qwik build preview && vite preview --open",
     "serve": "wrangler pages dev ./dist",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "images": "python-image-encoder/venv/bin/python3.10 python-image-encoder/main.py"
   },
   "devDependencies": {
     "@builder.io/qwik": "0.9.0",
