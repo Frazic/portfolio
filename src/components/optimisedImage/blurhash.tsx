@@ -29,7 +29,9 @@ export const BlurHash = component$((props: BlurhashProps) => {
     // // Render the blurhash when the element is visible on client
     useClientEffect$(() => {
         const hash = props.hash;
+        const t0 = performance.now();
         renderHash(ref.value, hash, width, height);
+        console.log(performance.now() - t0 + "ms");
     });
 
     return (
