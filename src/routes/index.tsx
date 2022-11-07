@@ -92,7 +92,8 @@ export default component$(() => {
       </div>
 
       {/* <img className='home-page-photo' src="/josh-photo.jpg" alt="Picture of Joshua Bruylant" loading='lazy' /> */}
-      <OptimisedImage className='home-page-photo' image={{ path: "josh-photo.jpg", hash: "LOG95CD%9FWB~qM{t7IUD%Rjt7j[" }} alt="Picture of Joshua Bruylant" />
+      {/* <OptimisedImage className='home-page-photo' image={{ src: "josh-photo.jpg", hash: "LOG95CD%9FWB~qM{t7IUD%Rjt7j[" }} alt="Picture of Joshua Bruylant" /> */}
+      <OptimisedImage image={{ src: "josh-photo.jpg", hash: "LOG95CD%9FWB~qM{t7IUD%Rjt7j[" }} />
 
     </div>
   );
