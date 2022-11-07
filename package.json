@@ -23,8 +23,8 @@
     "images": "python-image-encoder/venv/bin/python3.10 python-image-encoder/main.py"
   },
   "devDependencies": {
-    "@builder.io/qwik": "0.9.0",
-    "@builder.io/qwik-city": "0.0.111",
+    "@builder.io/qwik": "0.12.1",
+    "@builder.io/qwik-city": "0.0.118",
     "@types/eslint": "8.4.6",
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "5.37.0",
@@ -37,5 +37,8 @@
     "vite": "3.1.1",
     "vite-tsconfig-paths": "3.5.0",
     "wrangler": "beta"
+  },
+  "dependencies": {
+    "fast-blurhash": "^1.0.1"
   }
 }
