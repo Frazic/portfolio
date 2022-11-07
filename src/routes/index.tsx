@@ -1,5 +1,4 @@
 import { component$ } from '@builder.io/qwik';
-import { OptimisedImage } from '~/components/optimisedImage/optimisedImage';
 
 export default component$(() => {
   return (
@@ -92,8 +91,6 @@ export default component$(() => {
       </div>
 
       <img className='home-page-photo' src="/josh-photo.jpg" alt="Picture of Joshua Bruylant" loading='lazy' />
-      {/* <OptimisedImage className='home-page-photo' image={{ src: "josh-photo.jpg", hash: "LOG95CD%9FWB~qM{t7IUD%Rjt7j[" }} alt="Picture of Joshua Bruylant" /> */}
-      <OptimisedImage className="home-page-photo" alt="Picture of Joshua Bruylant" image={{ src: "/images/josh-photo.jpg", hash: "LOG95CD%9FWB~qM{t7IUD%Rjt7j[" }} />
     </div>
   );
 });
