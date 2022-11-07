@@ -1,5 +1,10 @@
+// Special thanks to wmertens#8241
+// https://stackblitz.com/edit/qwik-starter-nhupku?file=src%2Froutes%2Findex.tsx,src%2Fcomponents%2Fblurhash.tsx,package.json
+
 import { component$, useClientEffect$, useSignal } from "@builder.io/qwik";
-import { decodeBlurHash as decode } from "fast-blurhash";
+import { isServer } from '@builder.io/qwik/build';
+import { BlurHash } from "./blurhash";
+
 export interface OptimisedImageProps {
     image: {
         src: string,
@@ -10,33 +15,27 @@ export interface OptimisedImageProps {
 }
 
 export const OptimisedImage = component$((props: OptimisedImageProps) => {
-    const isLoaded = useSignal(false);
-    const width = 32;
-    const height = 32;
-    const ref = useSignal<HTMLCanvasElement>();
 
-    // Render the blurhash when the element is visible on client
+
+    const loadState = useSignal(isServer ? 0 : 1);
+
     useClientEffect$(() => {
-        const pixels = decode(props.image.hash, width, height);
-        const canvas = ref.value!;
-        const ctx = canvas.getContext('2d')!;
-        const imageData = ctx.createImageData(width, height);
-        imageData.data.set(pixels);
-        ctx.putImageData(imageData, 0, 0);
-    }, { eagerness: "load" });
+        if (loadState.value === 0) loadState.value = 1;
+    });
 
     return (
         <div style={{ position: "relative" }}>
-            {!isLoaded.value &&
-                (<canvas
-                    // We always fill the container and retain our aspect ratio
-                    style={{ width: '100%', position: "absolute", top: 0, left: 0, "z-index": 20 }}
-                    width={width}
-                    height={height}
-                    ref={ref}
-                />)
-            }
-            <img className={props.className} alt={props.alt} loading="lazy" src={props.image.src} onLoad$={() => (isLoaded.value = true)} />
+            {loadState.value > 0 && (
+                <img className={props.className} src={props.image.src} onLoad$={() => (loadState.value = 2)} alt={props.alt} loading="lazy" />
+            )}
+            {loadState.value < 2 && <BlurHash hash={props.image.hash} />}
+
+
+            {/* This bit might not be needed? */}
+            {/* {isServer && props.image.src && (
+                // Must write html ourselves or Qwik crashes https://github.com/BuilderIO/qwik/issues/2024
+                <noscript dangerouslySetInnerHTML={`<img src="${props.image.src}" />`} />
+            )} */}
         </div>
     );
 });
