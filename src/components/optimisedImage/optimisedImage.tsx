@@ -4,7 +4,9 @@ export interface OptimisedImageProps {
     image: {
         src: string,
         hash: string
-    }
+    },
+    className: string,
+    alt: string
 }
 
 export const OptimisedImage = component$((props: OptimisedImageProps) => {
@@ -34,7 +36,7 @@ export const OptimisedImage = component$((props: OptimisedImageProps) => {
                     ref={ref}
                 />)
             }
-            <img src={props.image.src} onLoad$={() => (isLoaded.value = true)} />
+            <img className={props.className} alt={props.alt} loading="lazy" src={props.image.src} onLoad$={() => (isLoaded.value = true)} />
         </div>
     );
 });

@@ -93,8 +93,13 @@ export default component$(() => {
 
       {/* <img className='home-page-photo' src="/josh-photo.jpg" alt="Picture of Joshua Bruylant" loading='lazy' /> */}
       {/* <OptimisedImage className='home-page-photo' image={{ src: "josh-photo.jpg", hash: "LOG95CD%9FWB~qM{t7IUD%Rjt7j[" }} alt="Picture of Joshua Bruylant" /> */}
-      <OptimisedImage image={{ src: "images/josh-photo.jpg", hash: "LOG95CD%9FWB~qM{t7IUD%Rjt7j[" }} />
-
+      <OptimisedImage className="home-page-photo" alt="Picture of Joshua Bruylant" image={{ src: "josh-photo.jpg", hash: "LOG95CD%9FWB~qM{t7IUD%Rjt7j[" }} />
+      <img src="josh-photo.jpg" />
+      <img src="/josh-photo.jpg" />
+      <img src="images/josh-photo.jpg" />
+      <img src="/images/josh-photo.jpg" />
+      <img src="public/images/josh-photo.jpg" />
+      <img src="/public/images/josh-photo.jpg" />
     </div>
   );
 });
