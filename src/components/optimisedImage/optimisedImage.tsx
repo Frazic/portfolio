@@ -15,8 +15,6 @@ export interface OptimisedImageProps {
 }
 
 export const OptimisedImage = component$((props: OptimisedImageProps) => {
-
-
     const loadState = useSignal(isServer ? 0 : 1);
 
     useClientEffect$(() => {
@@ -25,10 +23,10 @@ export const OptimisedImage = component$((props: OptimisedImageProps) => {
 
     return (
         <div style={{ position: "relative" }}>
+            {loadState.value < 2 && <BlurHash hash={props.image.hash} />}
             {loadState.value > 0 && (
                 <img className={props.className} src={props.image.src} onLoad$={() => (loadState.value = 2)} alt={props.alt} loading="lazy" />
             )}
-            {loadState.value < 2 && <BlurHash hash={props.image.hash} />}
 
 
             {/* This bit might not be needed? */}
