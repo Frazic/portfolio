@@ -1,5 +1,6 @@
 import { component$, useSignal, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./skills.css?inline";
+import { TalentColumn } from "./talentColumn";
 
 export default component$(() => {
     useStylesScoped$(styles);
@@ -28,7 +29,19 @@ export default component$(() => {
                         </div>
                     </div>
                 </div>
-                <div className="tree tree-2">Tree 2</div>
+
+                <div className="tree tree-2">
+                    <div className={"talent-grid"} onClick$={() => { isTree2Active.value = !isTree2Active.value; console.log("2 " + isTree2Active.value) }}>
+                        <div className="talent-header">Tree 2</div>
+                        <TalentColumn isActive={isTree2Active.value}
+                            items={[
+                                { name: "Talent 1", order: 1 },
+                                { name: "Talent 2", order: 2 },
+                                { name: "Talent 3", order: 3 }
+                            ]} />
+                    </div>
+                </div>
+
                 <div className="tree tree-3">Tree 3</div>
             </div>
         </>

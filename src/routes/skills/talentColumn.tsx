@@ -1,28 +1,42 @@
-import { Component, component$, useSignal, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useSignal, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./skills.css";
 
 export interface TalentColumnProps {
-    items$: Component<TalentItemProps>[];
+    isActive: boolean,
+    items: {
+        name: string,
+        order: number
+    }[],
 }
 
 export const TalentColumn = component$((props: TalentColumnProps) => {
-    props.items$.forEach((item) => item.toString)
+    useStylesScoped$(styles);
+
+    return (
+        // <div className={props.isActive ? "talent-column active" : "talent-column"}>
+        <div className={"talent-column"}>
+            {
+                props.items.map((item) =>
+                    <TalentItem name={item.name} order={item.order} isActive={props.isActive} />
+                )
+            }
+        </div>
+    )
 });
 
-export interface TalentItemProps {
+interface TalentItemProps {
     name: string
     order: number;
+    isActive: boolean;
 }
 
 export const TalentItem = component$((props: TalentItemProps) => {
     useStylesScoped$(styles);
 
-    const isActive = useSignal(false);
-
     return (
         <div
             style={{ "--order": props.order }}
-            className={isActive.value ? "talent-item active" : "talent-item"}>
+            className={props.isActive ? "talent-item active" : "talent-item"}>
             {props.name}
         </div>
     );

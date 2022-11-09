@@ -24,17 +24,16 @@
 
 .talent-grid > .talent-column {
     display: flex;
-    opacity: 0;
     flex-direction: column;
     transition: 200ms ease;
 
 }
 
-.talent-grid > .active {
-    opacity: 1;
-    display: flex;
+.talent-column > .talent-item {
+    opacity: 0;
+    transition: calc(var(--order) * 1000ms) cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
-.talent-column > .talent-item {
-    transition: calc(var(--order) * 50ms) ease;
+.talent-column > .active {
+    opacity: 1;
 }
