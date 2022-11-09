@@ -1,0 +1,40 @@
+.tree-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tree > .talent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2em 1fr;
+    justify-items: center;
+    border: 1px solid blue;
+}
+
+.talent-grid > * {
+    border: 1px solid red;
+}
+
+.talent-grid > .talent-header {
+    grid-column: span 2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.talent-grid > .talent-column {
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    transition: 200ms ease;
+
+}
+
+.talent-grid > .active {
+    opacity: 1;
+    display: flex;
+}
+
+.talent-column > .talent-item {
+    transition: calc(var(--order) * 50ms) ease;
+}
