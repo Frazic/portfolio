@@ -5,7 +5,7 @@
 
 .tree > .talent-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2em 1fr;
     justify-items: center;
     border: 1px solid blue;
@@ -16,7 +16,7 @@
 }
 
 .talent-grid > .talent-header {
-    grid-column: span 2;
+    grid-column: 1/-1;
     text-align: center;
     display: flex;
     align-items: center;
@@ -25,13 +25,17 @@
 .talent-grid > .talent-column {
     display: flex;
     flex-direction: column;
+    opacity: 1;
     transition: 200ms ease;
+}
 
+.talent-grid > .active {
+    opacity: 1;
 }
 
 .talent-column > .talent-item {
     opacity: 0;
-    transition: calc(var(--order) * 1000ms) cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition: all calc(var(--order) * 500ms) ease
 }
 
 .talent-column > .active {
