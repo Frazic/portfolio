@@ -1,11 +1,34 @@
 .tree-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    --items-transition-speed: 500ms;
+    --max-nb-talents: 3; /* TODO set this */
+    --bg-transition-speed: calc(var(--max-nb-talents) * var(--items-transition-speed));
+}
+
+.tree-grid > .tree {
+    background: none;
+    transition: all var(--bg-transition-speed) ease;
+}
+
+.tree-grid > .tree-1-active {
+    background: blue;
+    transition: all var(--bg-transition-speed) ease;
+}
+
+.tree-grid > .tree-2-active {
+    background: red;
+    transition: all var(--bg-transition-speed) ease;
+}
+
+.tree-grid > .tree-3-active {
+    background: green;
+    transition: all var(--bg-transition-speed) ease;
 }
 
 .tree > .talent-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: 2em 1fr;
     justify-items: center;
     border: 1px solid blue;
@@ -17,25 +40,26 @@
 
 .talent-grid > .talent-header {
     grid-column: 1/-1;
+    grid-row: 1;
     text-align: center;
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
 }
 
 .talent-grid > .talent-column {
     display: flex;
     flex-direction: column;
     opacity: 1;
-    transition: 200ms ease;
-}
-
-.talent-grid > .active {
-    opacity: 1;
+    width: 100%;
+    text-align: center;
 }
 
 .talent-column > .talent-item {
     opacity: 0;
-    transition: all calc(var(--order) * 500ms) ease
+    transition: all calc(var(--order) * var(--items-transition-speed)) ease;
+    word-break: break-all;
 }
 
 .talent-column > .active {

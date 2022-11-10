@@ -17,12 +17,12 @@ export default component$(() => {
                 <p>Skills talent tree!</p>
             </div>
             <div className="tree-grid">
-                <div className="tree tree-1">
-                    <div className={"talent-grid"} onClick$={() => { isTree1Active.value = !isTree1Active.value }}>
+                <div className={isTree1Active.value ? "tree tree-1-active" : "tree tree-1"} onClick$={() => { isTree1Active.value = !isTree1Active.value }}>
+                    <div className="talent-grid">
                         <div className="talent-header">Tree 1</div>
                         <TalentColumn isActive={isTree1Active.value}
                             items={[
-                                { name: "Talent 1" },
+                                { name: "VERY BIG BIG BIG NAMEEEEEEEEEEEE" },
                                 { name: "Talent 2" },
                                 { name: "Talent 3" }
                             ]}
@@ -43,8 +43,8 @@ export default component$(() => {
                         />
                     </div>
                 </div>
-                <div className="tree tree-2">
-                    <div className="talent-grid" onClick$={() => { isTree2Active.value = !isTree2Active.value }}>
+                <div className={isTree2Active.value ? "tree tree-2-active" : "tree tree-2"} onClick$={() => { isTree2Active.value = !isTree2Active.value }}>
+                    <div className="talent-grid">
                         <div className="talent-header">Tree 2</div>
                         <TalentColumn isActive={isTree2Active.value}
                             items={[
@@ -69,8 +69,8 @@ export default component$(() => {
                         />
                     </div>
                 </div>
-                <div className="tree tree-3">
-                    <div className="talent-grid" onClick$={() => { isTree3Active.value = !isTree3Active.value }}>
+                <div className={isTree3Active.value ? "tree tree-3-active" : "tree tree-3"} onClick$={() => { isTree3Active.value = !isTree3Active.value }}>
+                    <div className="talent-grid">
                         <div className="talent-header">Tree 3</div>
                         <TalentColumn isActive={isTree3Active.value}
                             items={[
