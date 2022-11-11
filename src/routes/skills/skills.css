@@ -8,22 +8,19 @@
 
 .tree-grid > .tree {
     background: none;
-    transition: all var(--bg-transition-speed) ease;
+    transition: all var(--bg-transition-speed) cubic-bezier(0, 1.21, 0, 1.01);
 }
 
 .tree-grid > .tree-1-active {
     background-image: radial-gradient(circle, #A5410077, #14141400, #14141400);
-    transition: all var(--bg-transition-speed) ease;
 }
 
 .tree-grid > .tree-2-active {
-    background-image: radial-gradient(circle, #743d8377, #14141400, #14141400);
-    transition: all var(--bg-transition-speed) ease;
+    background-image: radial-gradient(circle, #420E5177, #14141400, #14141400);
 }
 
 .tree-grid > .tree-3-active {
     background-image: radial-gradient(circle, #47701077, #14141400, #14141400);
-    transition: all var(--bg-transition-speed) ease;
 }
 
 .tree > .talent-grid {
@@ -67,6 +64,9 @@
 
 .talent-column > .active {
     opacity: 1;
+    background: #23232e;
+    box-shadow: 0 6px 0px 0px rgb(0 0 0 / 50%), 0px 20px 20px 0px rgb(0 0 0 / 20%);
+    border-radius: 1em;
 }
 
 .talent-item > i {
