@@ -12,17 +12,17 @@
 }
 
 .tree-grid > .tree-1-active {
-    background: blue;
+    background-image: radial-gradient(circle, #A5410077, #14141400, #14141400);
     transition: all var(--bg-transition-speed) ease;
 }
 
 .tree-grid > .tree-2-active {
-    background: red;
+    background-image: radial-gradient(circle, #743d8377, #14141400, #14141400);
     transition: all var(--bg-transition-speed) ease;
 }
 
 .tree-grid > .tree-3-active {
-    background: green;
+    background-image: radial-gradient(circle, #47701077, #14141400, #14141400);
     transition: all var(--bg-transition-speed) ease;
 }
 
@@ -31,14 +31,10 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: 2em 1fr;
     justify-items: center;
-    border: 1px solid blue;
-}
-
-.talent-grid > * {
-    border: 1px solid red;
 }
 
 .talent-grid > .talent-header {
+    padding: unset;
     grid-column: 1/-1;
     grid-row: 1;
     text-align: center;
@@ -46,13 +42,13 @@
     align-items: center;
     width: 100%;
     justify-content: center;
+    text-transform: uppercase;
 }
 
 .talent-grid > .talent-column {
     display: flex;
     flex-direction: column;
     opacity: 1;
-    width: 100%;
     text-align: center;
 }
 
@@ -60,8 +56,19 @@
     opacity: 0;
     transition: all calc(var(--order) * var(--items-transition-speed)) ease;
     word-break: break-all;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin-bottom: 1em;
+    padding: 0.5em;
 }
 
 .talent-column > .active {
     opacity: 1;
+}
+
+.talent-item > i {
+    padding-right: 0.1em;
 }
