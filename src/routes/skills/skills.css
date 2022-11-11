@@ -64,7 +64,7 @@
 
 .talent-column > .active {
     opacity: 1;
-    background: #23232e;
+    background: var(--color-purple-dark);
     box-shadow: 0 6px 0px 0px rgb(0 0 0 / 50%), 0px 20px 20px 0px rgb(0 0 0 / 20%);
     border-radius: 1em;
 }
