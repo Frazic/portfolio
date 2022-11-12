@@ -1,4 +1,4 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useStyles$ } from "@builder.io/qwik";
 import styles from "./skills.css";
 
 export interface TalentColumnProps {
@@ -10,7 +10,7 @@ export interface TalentColumnProps {
 }
 
 export const TalentColumn = component$((props: TalentColumnProps) => {
-    useStylesScoped$(styles);
+    useStyles$(styles);
 
     const createItems = () => {
         const items: any[] = []
@@ -42,7 +42,7 @@ interface TalentItemProps {
 }
 
 export const TalentItem = component$((props: TalentItemProps) => {
-    useStylesScoped$(styles);
+    useStyles$(styles);
 
     return (
         <div
