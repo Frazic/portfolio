@@ -34,25 +34,11 @@ export default component$(() => {
                                 { name: "Talent 3", iconClass: "fa-solid fa-camera" },
                             ]}
                         />
-                        <TalentColumn isActive={isTree1Active.value}
-                            items={[
-                                { name: "Talent 1", iconClass: "fa-solid fa-camera" },
-                                { name: "Talent 2", iconClass: "fa-solid fa-camera" },
-                                { name: "Talent 3", iconClass: "fa-solid fa-camera" },
-                            ]}
-                        />
                     </div>
                 </div>
                 <div className={isTree2Active.value ? "tree tree-2-active" : "tree tree-2"}>
                     <div className="talent-grid">
                         <h2 className="talent-header" onClick$={() => { isTree2Active.value = !isTree2Active.value }}>Tree 2</h2>
-                        <TalentColumn isActive={isTree2Active.value}
-                            items={[
-                                { name: "Talent 1", iconClass: "fa-solid fa-camera" },
-                                { name: "Talent 2", iconClass: "fa-solid fa-camera" },
-                                { name: "Talent 3", iconClass: "fa-solid fa-camera" },
-                            ]}
-                        />
                         <TalentColumn isActive={isTree2Active.value}
                             items={[
                                 { name: "Talent 1", iconClass: "fa-solid fa-camera" },
@@ -86,16 +72,24 @@ export default component$(() => {
                                 { name: "Talent 3", iconClass: "fa-solid fa-camera" },
                             ]}
                         />
-                        <TalentColumn isActive={isTree3Active.value}
-                            items={[
-                                { name: "Talent 1", iconClass: "fa-solid fa-camera" },
-                                { name: "Talent 2", iconClass: "fa-solid fa-camera" },
-                                { name: "Talent 3", iconClass: "fa-solid fa-camera" },
-                            ]}
-                        />
                     </div>
                 </div>
             </div>
         </>
     );
 });
+
+/**
+ * <div style="
+    display: contents;
+">
+<svg viewBox="-50 0 100 100" xmlns="http://www.w3.org/2000/svg" style="
+">
+  <rect x="-1" y="0" width="1" height="100%" style="
+    stroke: white;
+    fill: white;
+"></rect>
+  Sorry, your browser does not support inline SVG.
+</svg>
+</div>
+ */

@@ -25,7 +25,7 @@
 
 .tree > .talent-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: 2em 1fr;
     justify-items: center;
     row-gap: 1em;
@@ -72,7 +72,16 @@
     padding: 0.5em;
 }
 
-.talent-column > .active {
+/* .talent-column > .arrow {
+    opacity: 0;
+    transition: all calc(var(--order) * var(--items-transition-speed)) ease;
+} */
+
+/* .talent-column > .arrow.active {
+    opacity: 1;
+} */
+
+.talent-column > .talent-item.active {
     opacity: 1;
     background: var(--color-purple-dark);
     box-shadow: 0 6px 0px 0px rgb(0 0 0 / 50%), 0px 20px 20px 0px rgb(0 0 0 / 20%);
@@ -82,3 +91,8 @@
 .talent-item > i {
     padding-right: 0.1em;
 }
+
+/* Remove margin if followed by an arrow */
+/* .talent-item:has(+ .arrow) {
+    margin-bottom: 0;
+} */
