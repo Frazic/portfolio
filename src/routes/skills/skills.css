@@ -4,6 +4,9 @@
     --items-transition-speed: 500ms;
     --max-nb-talents: 3; /* TODO set this */
     --bg-transition-speed: calc(var(--max-nb-talents) * var(--items-transition-speed));
+
+    --item-height: 1.25em;
+    --spacing-height: 0.75em;
 }
 
 .tree-grid > .tree {
@@ -60,39 +63,48 @@
 }
 
 .talent-column > .talent-item {
-    opacity: 0;
-    transition: all calc(var(--order) * var(--items-transition-speed)) ease;
     word-break: break-all;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: justify;
-    margin-bottom: 1em;
     padding: 0.5em;
-}
 
-/* .talent-column > .arrow {
     opacity: 0;
     transition: all calc(var(--order) * var(--items-transition-speed)) ease;
-} */
-
-/* .talent-column > .arrow.active {
-    opacity: 1;
-} */
-
-.talent-column > .talent-item.active {
-    opacity: 1;
     background: var(--color-purple-dark);
     box-shadow: 0 6px 0px 0px rgb(0 0 0 / 50%), 0px 20px 20px 0px rgb(0 0 0 / 20%);
-    border-radius: 1em;
+    border-radius: 0.5em;
+    height: var(--item-height);
+}
+
+.talent-column > .talent-link {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+
+    opacity: 0;
+    transition: all calc(var(--order) * var(--items-transition-speed)) ease;
+    height: var(--spacing-height);
+}
+
+.talent-link > .link-line {
+    border-right: 3px solid var(--color-purple-light);
+}
+
+.talent-column > .talent-space {
+    height: var(--spacing-height);
+}
+
+.talent-column > .talent-empty {
+    height: calc(calc(var(--item-height) + calc(2 * var(--spacing-height))) + 1em);
 }
 
 .talent-item > i {
     padding-right: 0.1em;
 }
 
-/* Remove margin if followed by an arrow */
-/* .talent-item:has(+ .arrow) {
-    margin-bottom: 0;
-} */
+.talent-column > .active {
+    opacity: 1;
+}

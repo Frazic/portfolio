@@ -42,14 +42,18 @@ export default component$(() => {
                         <TalentColumn isActive={isTree2Active.value}
                             items={[
                                 { name: "Talent 1", iconClass: "fa-solid fa-camera" },
+                                { name: "link" },
                                 { name: "Talent 2", iconClass: "fa-solid fa-camera" },
+                                { name: "space" },
                                 { name: "Talent 3", iconClass: "fa-solid fa-camera" },
                             ]}
                         />
                         <TalentColumn isActive={isTree2Active.value}
                             items={[
                                 { name: "Talent 1", iconClass: "fa-solid fa-camera" },
+                                { name: "empty" },
                                 { name: "Talent 2", iconClass: "fa-solid fa-camera" },
+                                { name: "link" },
                                 { name: "Talent 3", iconClass: "fa-solid fa-camera" },
                             ]}
                         />

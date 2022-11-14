@@ -20,12 +20,40 @@ export const TalentColumn = component$((props: TalentColumnProps) => {
             // This flips the order on inactive so they fade out from bottom to top
             const order = props.isActive ? index + 1 : props.items.length - index;
 
-            // if (item.name === "↧") {
-            //     items.push(<div style={{ "--order": order }} className={props.isActive ? "arrow active" : "arrow"}>{item.name}</div>)
-            // } else {
-            //     items.push(<TalentItem name={item.name} order={order} isActive={props.isActive} iconClass={item.iconClass} />);
-            // }
-            items.push(<TalentItem name={item.name} order={order} isActive={props.isActive} iconClass={item.iconClass} />);
+            switch (item.name) {
+                case "link":
+                    items.push(
+                        <div
+                            style={{ "--order": order }}
+                            className={props.isActive ? "talent-link active" : "talent-link"}
+                        >
+                            <div className="link-line"></div>
+                        </div>
+                    )
+                    break;
+
+                case "space":
+                    items.push(
+                        <div
+                            style={{ "--order": order }}
+                            className={props.isActive ? "talent-space active" : "talent-space"}
+                        ></div>
+                    )
+                    break;
+
+                case "empty":
+                    items.push(
+                        <div
+                            style={{ "--order": order }}
+                            className={props.isActive ? "talent-empty active" : "talent-empty"}
+                        ></div>
+                    )
+                    break;
+
+                default:
+                    items.push(<TalentItem name={item.name} order={order} isActive={props.isActive} iconClass={item.iconClass} />);
+                    break;
+            }
         }
         return items;
     }
