@@ -48,6 +48,7 @@
     background: var(--color-purple-dark);
     box-shadow: 0 6px 0px 0px rgb(0 0 0 / 50%), 0px 20px 20px 0px rgb(0 0 0 / 20%);
     border-radius: 1em;
+    cursor: pointer;
 }
 
 .talent-grid > .talent-header:active {
@@ -74,9 +75,16 @@
     opacity: 0;
     transition: all calc(var(--order) * var(--items-transition-speed)) ease;
     background: var(--color-purple-dark);
-    box-shadow: 0 6px 0px 0px rgb(0 0 0 / 50%), 0px 20px 20px 0px rgb(0 0 0 / 20%);
     border-radius: 0.5em;
     height: var(--item-height);
+    z-index: 2;
+    cursor: default;
+}
+
+.talent-column > .talent-item.active:hover {
+    transition: all 50ms ease;
+    background: var(--color-purple-mid);
+    cursor: help;
 }
 
 .talent-column > .talent-link {
