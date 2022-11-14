@@ -12,7 +12,7 @@ export interface TalentColumnProps {
 export const TalentColumn = component$((props: TalentColumnProps) => {
     useStyles$(styles);
 
-    const createItems = () => {
+    const createItems$ = () => {
         const items: any[] = []
         for (let index = 0; index < props.items.length; index++) {
             const item = props.items[index];
@@ -61,7 +61,7 @@ export const TalentColumn = component$((props: TalentColumnProps) => {
     return (
         <div className={props.isActive ? "talent-column active" : "talent-column"}>
             {
-                createItems()
+                createItems$()
             }
         </div>
     )
