@@ -1,9 +1,7 @@
 .tree-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    --items-transition-speed: 500ms;
-    --max-nb-talents: 3; /* TODO set this */
-    --bg-transition-speed: calc(var(--max-nb-talents) * var(--items-transition-speed));
+    --items-transition-speed: 300ms;
 
     --item-height: 1.25em;
     --spacing-height: 0.75em;
@@ -11,7 +9,6 @@
 
 .tree-grid > .tree {
     background: none;
-    transition: all var(--bg-transition-speed) cubic-bezier(0, 1.21, 0, 1.01);
 }
 
 .tree-grid > .tree-1-active {
@@ -61,6 +58,7 @@
     flex-direction: column;
     opacity: 1;
     text-align: center;
+    width: 100%;
 }
 
 .talent-column > .talent-item {
@@ -71,9 +69,10 @@
     align-items: center;
     text-align: justify;
     padding: 0.5em;
+    width: 80%;
 
     opacity: 0;
-    transition: all calc(var(--order) * var(--items-transition-speed)) ease;
+    transition: opacity calc(var(--order) * var(--items-transition-speed)), background var(--items-transition-speed) ease;
     background: var(--color-purple-dark);
     border-radius: 0.5em;
     height: var(--item-height);
@@ -82,7 +81,6 @@
 }
 
 .talent-column > .talent-item.active:hover {
-    transition: all 50ms ease;
     background: var(--color-purple-mid);
     cursor: help;
 }

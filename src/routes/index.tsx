@@ -86,7 +86,7 @@ export default component$(() => {
         <br />
         <br />
 
-        <p className='text-justified'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla velit sapiente sequi dolorem, facere temporibus inventore reprehenderit quae, voluptatibus, rem ex hic libero ratione neque quam cumque ea illum molestiae. Aperiam repellat quos iste quae possimus sunt dolore, odio libero cum id fugit iure voluptatem ea esse sed excepturi ab?</p>
+        <p className='text-justified'>Make JOSHUA BRUYLANT appear in big bold letters in a staggered effect, nothing else</p>
 
       </div>
 
