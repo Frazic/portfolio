@@ -4,8 +4,18 @@ export default component$(() => {
   return (
     <div className='home-page-layout'>
       <div className='container-centered'>
-        <div className='hero-title text-centered'>
-          Joshua Bruylant
+        <div className='hero-title'>
+          {"joshua".split('').map((char, idx) => {
+            return <span className='staggered-character top' style={{ "--order": idx }}>
+              {char}
+            </span>
+          })}
+          <br />
+          {"bruylant".split('').map((char, idx) => {
+            return <span className='staggered-character top' style={{ "--order": idx }}>
+              {char}
+            </span>
+          })}
         </div>
 
         <div className='text-centered'>

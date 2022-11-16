@@ -166,6 +166,15 @@ footer a:hover {
   font-weight: bolder;
 }
 
+.hero-title > span.staggered-character {
+  display: inline-block;
+  --animation-speed: 140ms;
+  opacity: 0;
+  animation: slideInFromLeft var(--animation-speed) forwards;
+  transition: all var(--animation-speed) ease;
+  animation-delay: calc(var(--order) * var(--animation-speed));
+}
+
 .descriptors {
   display: flex;
   flex-direction: column;
@@ -237,6 +246,10 @@ footer a:hover {
 
   .home-page-layout {
     flex-direction: row;
+  }
+
+  .home-page-photo {
+    width: 35vw;
   }
 }
 
