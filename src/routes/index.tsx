@@ -12,7 +12,7 @@ export default component$(() => {
           })}
           <br />
           {"bruylant".split('').map((char, idx) => {
-            return <span className='staggered-character top' style={{ "--order": idx }}>
+            return <span className='staggered-character bot' style={{ "--order": idx }}>
               {char}
             </span>
           })}

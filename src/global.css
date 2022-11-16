@@ -166,13 +166,21 @@ footer a:hover {
   font-weight: bolder;
 }
 
-.hero-title > span.staggered-character {
+.hero-title > .staggered-character {
   display: inline-block;
-  --animation-speed: 140ms;
   opacity: 0;
-  animation: slideInFromLeft var(--animation-speed) forwards;
-  transition: all var(--animation-speed) ease;
-  animation-delay: calc(var(--order) * var(--animation-speed));
+  --animation-speed: 100ms;
+  transition: animation var(--animation-speed) ease-in-out;
+}
+
+.staggered-character.top {
+  animation: slideInFromTop var(--animation-speed) forwards;
+  animation-delay: calc(var(--order) * 167ms);
+}
+
+.staggered-character.bot {
+  animation: slideInFromBot var(--animation-speed) forwards;
+  animation-delay: calc(var(--order) * 125ms);
 }
 
 .descriptors {
@@ -261,5 +269,39 @@ footer a:hover {
 
   30%, 100% {
     opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(15%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBot {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  30%, 85% {
+    opacity: 1;
+    transform: translateY(-15%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
