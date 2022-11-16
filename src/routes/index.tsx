@@ -4,9 +4,9 @@ export default component$(() => {
   return (
     <div className='home-page-layout'>
       <div className='container-centered'>
-        <h1 className='hero-title text-centered'>
+        <div className='hero-title text-centered'>
           Joshua Bruylant
-        </h1>
+        </div>
 
         <div className='text-centered'>
           <li className='descriptors'>
@@ -83,7 +83,7 @@ export default component$(() => {
         </div>
       </div>
 
-      <img className='home-page-photo' src="/images/josh-photo-cropped.jpg" alt="Picture of Joshua Bruylant" loading='lazy' />
+      <img className='home-page-photo' src="/images/josh-photo.webp" alt="Picture of Joshua Bruylant" loading='lazy' />
     </div>
   );
 });
