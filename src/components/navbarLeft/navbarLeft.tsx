@@ -386,7 +386,7 @@ export default component$(() => {
                     </a>
                 </li>
 
-                {/* FLOWER */}
+                {/* FLOWER
                 <li class="nav-item">
                     <a href="/flower?pride=true" class="nav-link">
                         <svg
@@ -418,7 +418,7 @@ export default component$(() => {
                     </a>
                 </li>
 
-                {/* THEME */}
+                THEME
                 <li class="nav-item">
                     <a href="" class="nav-link">
                         <svg
@@ -447,7 +447,7 @@ export default component$(() => {
                         </svg>
                         <span class="link-text">Theme</span>
                     </a>
-                </li>
+                </li> */}
             </ul >
         </nav >
     );

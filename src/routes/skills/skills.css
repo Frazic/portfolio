@@ -12,14 +12,17 @@
 }
 
 .tree-grid > .tree-1-active {
+    animation: fadeIn var(--items-transition-speed) forwards;
     background-image: radial-gradient(circle, #A5410077, #14141400, #14141400);
 }
 
 .tree-grid > .tree-2-active {
+    animation: fadeIn var(--items-transition-speed) forwards;
     background-image: radial-gradient(circle, #420E5177, #14141400, #14141400);
 }
 
 .tree-grid > .tree-3-active {
+    animation: fadeIn var(--items-transition-speed) forwards;
     background-image: radial-gradient(circle, #47701077, #14141400, #14141400);
 }
 
@@ -41,6 +44,8 @@
     width: 80%;
     justify-content: center;
     text-transform: uppercase;
+
+    animation: fadeIn var(--items-transition-speed) forwards;
 
     background: var(--color-purple-dark);
     box-shadow: 0 6px 0px 0px rgb(0 0 0 / 50%), 0px 20px 20px 0px rgb(0 0 0 / 20%);
@@ -73,8 +78,7 @@
 
     position: relative;
 
-    opacity: 0;
-    transition: opacity calc(var(--order) * var(--items-transition-speed)), background var(--items-transition-speed) ease;
+    animation: fadeOut calc(var(--order) * var(--items-transition-speed)) forwards;
     background: var(--color-purple-dark);
     border-radius: 0.5em;
     height: var(--item-height);
@@ -91,8 +95,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
 
-    opacity: 0;
-    transition: opacity calc(var(--order) * var(--items-transition-speed)) ease;
+    animation: fadeOut calc(var(--order) * var(--items-transition-speed)) forwards;
     height: var(--spacing-height);
 }
 
@@ -127,7 +130,6 @@
     /* left: 105%; */
 
     opacity: 0;
-    transition: opacity var(--items-transition-speed);
     pointer-events: none;
 }
 
@@ -142,9 +144,29 @@
 }
 
 .talent-item.active:hover > .talent-tooltip {
-    opacity: 1;
+    animation: fadeIn var(--items-transition-speed) forwards;
 }
 
 .talent-column > .active {
-    opacity: 1;
+    animation: fadeIn calc(var(--order) * var(--items-transition-speed)) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }

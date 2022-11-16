@@ -35,9 +35,9 @@
     width: 100%;
 }
 
-.nav-item:last-child {
+/* .nav-item:last-child {
     margin-top: auto;
-}
+} */
 
 .nav-link {
     display: flex;
