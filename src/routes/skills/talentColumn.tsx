@@ -6,6 +6,10 @@ export interface TalentColumnProps {
     items: {
         name: string,
         iconClass?: string,
+        tooltip?: {
+            text: string,
+            position: string
+        }
     }[],
 }
 
@@ -51,7 +55,7 @@ export const TalentColumn = component$((props: TalentColumnProps) => {
                     break;
 
                 default:
-                    items.push(<TalentItem name={item.name} order={order} isActive={props.isActive} iconClass={item.iconClass} />);
+                    items.push(<TalentItem name={item.name} order={order} isActive={props.isActive} iconClass={item.iconClass} tooltip={item.tooltip} />);
                     break;
             }
         }
@@ -72,6 +76,10 @@ interface TalentItemProps {
     order: number
     isActive: boolean
     iconClass?: string
+    tooltip?: {
+        text: string,
+        position: string
+    }
 }
 
 export const TalentItem = component$((props: TalentItemProps) => {
@@ -86,6 +94,10 @@ export const TalentItem = component$((props: TalentItemProps) => {
                 <i class={props.iconClass + ""}></i> // For some reason withtout the "" this causes Qwik to crash
             }
             <span>{props.name}</span>
+
+            {props.tooltip &&
+                <span className={"talent-tooltip " + props.tooltip.position}>{props.tooltip.text}</span>
+            }
         </div>
     );
 });

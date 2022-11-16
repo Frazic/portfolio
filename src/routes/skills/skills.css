@@ -71,12 +71,13 @@
     padding: 0.5em;
     width: 80%;
 
+    position: relative;
+
     opacity: 0;
     transition: opacity calc(var(--order) * var(--items-transition-speed)), background var(--items-transition-speed) ease;
     background: var(--color-purple-dark);
     border-radius: 0.5em;
     height: var(--item-height);
-    z-index: 2;
     cursor: default;
 }
 
@@ -91,7 +92,7 @@
     grid-template-rows: 1fr;
 
     opacity: 0;
-    transition: all calc(var(--order) * var(--items-transition-speed)) ease;
+    transition: opacity calc(var(--order) * var(--items-transition-speed)) ease;
     height: var(--spacing-height);
 }
 
@@ -109,6 +110,39 @@
 
 .talent-item > i {
     padding-right: 0.1em;
+}
+
+.talent-item > .talent-tooltip {
+    max-width: 60ch;
+    min-width: 20ch;
+    word-break: keep-all;
+    padding: 5px 5px;
+    border: 2px dashed var(--color-green-dark);
+    border-radius: 0.25em;
+    background-color: var(--color-purple-darkest);
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 999;
+    /* left: 105%; */
+
+    opacity: 0;
+    transition: opacity var(--items-transition-speed);
+    pointer-events: none;
+}
+
+.talent-item > .talent-tooltip.left {
+    left: unset;
+    right: 105%;
+}
+
+.talent-item > .talent-tooltip.right {
+    left: 105%;
+    right: unset;
+}
+
+.talent-item.active:hover > .talent-tooltip {
+    opacity: 1;
 }
 
 .talent-column > .active {

@@ -41,11 +41,11 @@ export default component$(() => {
                         <h2 className={isTree2Active.value ? "talent-header active" : "talent-header"} onClick$={() => { isTree2Active.value = !isTree2Active.value }}>Tree 2</h2>
                         <TalentColumn isActive={isTree2Active.value}
                             items={[
-                                { name: "Talent 1", iconClass: "fa-solid fa-camera" },
+                                { name: "Talent 1", iconClass: "fa-solid fa-camera", tooltip: { text: "Description of talent 1", position: "right" } },
                                 { name: "link" },
-                                { name: "Talent 2", iconClass: "fa-solid fa-camera" },
+                                { name: "Talent 2", iconClass: "fa-solid fa-camera", tooltip: { text: "Longer description of talent 2", position: "left" } },
                                 { name: "space" },
-                                { name: "Talent 3", iconClass: "fa-solid fa-camera" },
+                                { name: "Talent 3", iconClass: "fa-solid fa-camera", tooltip: { text: "Much much longer description of talent 3 that goes into too much details to fit into a reasonable tooltip that is easy to understand", position: "right" } },
                             ]}
                         />
                         <TalentColumn isActive={isTree2Active.value}
