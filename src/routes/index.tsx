@@ -83,7 +83,7 @@ export default component$(() => {
         </div>
       </div>
 
-      <img className='home-page-photo' src="/images/josh-photo.jpg" alt="Picture of Joshua Bruylant" loading='lazy' />
+      <img className='home-page-photo' src="/images/josh-photo-cropped.jpg" alt="Picture of Joshua Bruylant" loading='lazy' />
     </div>
   );
 });
