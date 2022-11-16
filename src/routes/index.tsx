@@ -4,8 +4,8 @@ export default component$(() => {
   return (
     <div className='home-page-layout'>
       <div className='container-centered'>
-        <h1 className='text-centered'>
-          JOSHUA BRUYLANT
+        <h1 className='hero-title text-centered'>
+          Joshua Bruylant
         </h1>
 
         <div className='text-centered'>
@@ -81,13 +81,6 @@ export default component$(() => {
             </ul>
           </li>
         </div>
-
-        <br />
-        <br />
-        <br />
-
-        <p className='text-justified'>Make JOSHUA BRUYLANT appear in big bold letters in a staggered effect, nothing else</p>
-
       </div>
 
       <img className='home-page-photo' src="/josh-photo.jpg" alt="Picture of Joshua Bruylant" loading='lazy' />

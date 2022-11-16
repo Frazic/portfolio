@@ -157,8 +157,14 @@ footer a:hover {
 .home-page-photo {
   border-radius: 10%;
   height: auto;
-  width: 39vw;
+  width: 90vw;
   min-width: 200px;
+}
+
+.hero-title {
+  font-size: 8em;
+  text-transform: uppercase;
+  line-height: 0.85em;
 }
 
 .descriptors {

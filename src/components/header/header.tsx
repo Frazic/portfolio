@@ -6,7 +6,12 @@ export default component$(() => {
 
   return (
     <header>
-      <a href="/"><div className="title">Joshua Bruylant's Portfolio</div></a>
+      <a href="/">
+        <div className='title'>
+          <i class="fa-solid fa-house fa-xs" />
+          <span>Joshua Bruylant</span>
+        </div>
+      </a>
     </header>
   );
 });
