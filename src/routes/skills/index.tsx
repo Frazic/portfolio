@@ -11,6 +11,14 @@ export default component$(() => {
 
     return (
         <>
+            <style>
+                {"\
+footer {\
+    transform: translateY(" + ((isTree1Active.value || isTree2Active.value || isTree3Active.value) ? "0" : "-15em") + ");\
+    transition: transform 300ms ease;\
+}"
+                }
+            </style>
             <div className="text-justified">
                 <h1>Skills</h1>
 
