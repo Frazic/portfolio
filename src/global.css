@@ -22,18 +22,18 @@
   /* Made using https://paletton.com */
 
   /* Purple tones */
-  --color-purple-lightest: #C3A5CB;
-  --color-purple-light: #743D83;
-  --color-purple-mid: #420E51;
+  --color-purple-lightest: #c3a5cb;
+  --color-purple-light: #743d83;
+  --color-purple-mid: #420e51;
   --color-purple-dark: #23232e;
   --color-purple-darkest: #141414;
 
   /* Green tones */
-  --color-green-lightest: #D0EDA9;
-  --color-green-light: #82AD47;
+  --color-green-lightest: #d0eda9;
+  --color-green-light: #82ad47;
   --color-green-mid: #477010;
   --color-green-dark: #213900;
-  --color-green-darkest: #070C00;
+  --color-green-darkest: #070c00;
 
   --transition-speed: 200ms;
 }
@@ -41,7 +41,7 @@
 body {
   background-color: var(--color-purple-darkest);
   color: var(--color-purple-lightest);
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
   font-weight: var(--font-weight-default);
   margin: 0;
   display: flex;
@@ -56,7 +56,10 @@ section {
   padding: 0 1rem 0 var(--body-padding);
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   padding: 0;
   margin: 0;
 }
@@ -89,19 +92,18 @@ a {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 0.25rem;
-    height: 0.25rem;
+  width: 0.25rem;
+  height: 0.25rem;
 }
 
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-corner {
-    background: #1e1e24;
+  background: #1e1e24;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #6649b8;
+  background: #6649b8;
 }
-
 
 footer {
   margin: auto var(--body-padding) 0 var(--body-padding);
@@ -208,18 +210,18 @@ footer a:hover {
   animation-delay: calc(var(--order) * var(--animation-speed));
 }
 
-.descriptors ul>svg {
+.descriptors ul > svg {
   width: 1rem;
   min-width: 0.2rem;
   height: auto;
   margin: 0;
 }
 
-.descriptors ul>span {
+.descriptors ul > span {
   font-size: 1.2rem;
 }
 
-@media screen and (min-width:601px) {
+@media screen and (min-width: 601px) {
   :root {
     --body-padding: calc(var(--navbar-width) + 1rem);
   }
@@ -247,7 +249,7 @@ footer a:hover {
   }
 }
 
-@media screen and (min-width:1001px) {
+@media screen and (min-width: 1001px) {
   h1 {
     font-size: 2em;
   }
@@ -267,7 +269,8 @@ footer a:hover {
     transform: translateX(-20%);
   }
 
-  30%, 100% {
+  30%,
+  100% {
     opacity: 1;
   }
 }
@@ -295,7 +298,8 @@ footer a:hover {
     transform: translateY(20%);
   }
 
-  30%, 85% {
+  30%,
+  85% {
     opacity: 1;
     transform: translateY(-15%);
   }

@@ -1,5 +1,5 @@
-import { component$ } from '@builder.io/qwik';
-import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
+import { component$ } from "@builder.io/qwik";
+import { useDocumentHead, useLocation } from "@builder.io/qwik-city";
 
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
@@ -18,13 +18,19 @@ export const RouterHead = component$(() => {
       <link rel="icon" type="image/png" href="/favicon.ico" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
-      <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
       <meta property="og:site_name" content="Joshua Bruylant's Portfolio" />
       {/* <meta name="twitter:site" content="@Frazic" /> */}
       {/* <meta name="twitter:title" content="Frazic" /> */}
 
-      <script src="https://kit.fontawesome.com/3b1cc2bcf4.js" crossOrigin="anonymous"></script>
+      <script
+        src="https://kit.fontawesome.com/3b1cc2bcf4.js"
+        crossOrigin="anonymous"
+      ></script>
 
       {head.meta.map((m) => (
         <meta {...m} />

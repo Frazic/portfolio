@@ -4,14 +4,14 @@
 
 ## TODO
 
-- Change left navbar icons  
+- Change left navbar icons
 - Make navbar a nice pinkish gradient, somewhat transparent
 - Set some global colour variables for text, bg etc
 - Titles everywhere!
 - Define content of pages
 - Define layout of pages
 - Something really cool would be each navbar item opens up a horizontal menu on hover:  
-(🐱) Projects:hover --> (P1) --> (P2) etc with animation for them appearing
+  (🐱) Projects:hover --> (P1) --> (P2) etc with animation for them appearing
 
 ---
 

@@ -1,5 +1,5 @@
-import { component$, useStylesScoped$ } from '@builder.io/qwik';
-import styles from './header.css?inline';
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import styles from "./header.css?inline";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -7,7 +7,7 @@ export default component$(() => {
   return (
     <header>
       <a href="/">
-        <div className='title'>
+        <div className="title">
           <i class="fa-solid fa-house fa-xs" />
           <span>Joshua Bruylant</span>
         </div>

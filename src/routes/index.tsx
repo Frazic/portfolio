@@ -1,26 +1,36 @@
-import { component$ } from '@builder.io/qwik';
-import { DocumentHead } from '@builder.io/qwik-city';
+import { component$ } from "@builder.io/qwik";
+import { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
-    <div className='home-page-layout'>
-      <div className='container-centered'>
-        <div className='hero-title'>
-          {"joshua".split('').map((char, idx) => {
-            return <span className='staggered-character top' style={{ "--order": idx }}>
-              {char}
-            </span>
+    <div className="home-page-layout">
+      <div className="container-centered">
+        <div className="hero-title">
+          {"joshua".split("").map((char, idx) => {
+            return (
+              <span
+                className="staggered-character top"
+                style={{ "--order": idx }}
+              >
+                {char}
+              </span>
+            );
           })}
           <br />
-          {"bruylant".split('').map((char, idx) => {
-            return <span className='staggered-character bot' style={{ "--order": idx }}>
-              {char}
-            </span>
+          {"bruylant".split("").map((char, idx) => {
+            return (
+              <span
+                className="staggered-character bot"
+                style={{ "--order": idx }}
+              >
+                {char}
+              </span>
+            );
           })}
         </div>
 
-        <div className='text-centered'>
-          <li className='descriptors'>
+        <div className="text-centered">
+          <li className="descriptors">
             <ul style={"--order: 1"}>
               <svg
                 aria-hidden="true"
@@ -94,13 +104,18 @@ export default component$(() => {
         </div>
       </div>
 
-      <img className='home-page-photo' src="/images/josh-photo.webp" alt="Picture of Joshua Bruylant" loading='lazy' />
+      <img
+        className="home-page-photo"
+        src="/images/josh-photo.webp"
+        alt="Picture of Joshua Bruylant"
+        loading="lazy"
+      />
     </div>
   );
 });
 
 export const head: DocumentHead = () => {
   return {
-    title: "Joshua Bruylant"
+    title: "Joshua Bruylant",
   };
 };
