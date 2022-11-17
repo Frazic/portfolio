@@ -189,6 +189,7 @@
     opacity: 0;
     animation: slideInFromLeft var(--transition-speed);
     animation-fill-mode: forwards;
+    margin-top: 10vh;
   }
 
   .card {
