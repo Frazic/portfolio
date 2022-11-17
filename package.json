@@ -36,8 +36,5 @@
     "vite": "3.1.1",
     "vite-tsconfig-paths": "3.5.0",
     "wrangler": "beta"
-  },
-  "dependencies": {
-    "fast-blurhash": "^1.0.1"
   }
 }
