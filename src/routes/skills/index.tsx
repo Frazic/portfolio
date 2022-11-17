@@ -14,6 +14,7 @@ export default component$(() => {
     <>
       <style>
         {"\
+@media screen and (min-width:1024px){\
 footer {\
     transform: translateY(" +
           (isTree1Active.value || isTree2Active.value || isTree3Active.value
@@ -21,7 +22,7 @@ footer {\
             : "-15em") +
           ");\
     transition: transform 300ms ease;\
-}"}
+}}"}
       </style>
       <h1>Skills</h1>
       <div className="tree-grid">
