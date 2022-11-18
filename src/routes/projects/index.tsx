@@ -19,7 +19,7 @@ export default component$(() => {
 
           <div className="card-author">
             <a className="author-avatar" href="#">
-              <img src="avatar.png" alt="avatar" />
+              <img src="/images/avatar.png" alt="avatar" />
             </a>
             <svg class="half-circle" viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
@@ -46,7 +46,7 @@ export default component$(() => {
 
           <div className="card-author">
             <a className="author-avatar" href="#">
-              <img src="avatar.png" alt="avatar" />
+              <img src="/images/avatar.png" alt="avatar" />
             </a>
             <svg class="half-circle" viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
@@ -73,7 +73,7 @@ export default component$(() => {
 
           <div className="card-author">
             <a className="author-avatar" href="#">
-              <img src="avatar.png" alt="avatar" />
+              <img src="/images/avatar.png" alt="avatar" />
             </a>
             <svg class="half-circle" viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
@@ -100,7 +100,7 @@ export default component$(() => {
 
           <div className="card-author">
             <a className="author-avatar" href="#">
-              <img src="avatar.png" alt="avatar" />
+              <img src="/images/avatar.png" alt="avatar" />
             </a>
             <svg class="half-circle" viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
@@ -127,7 +127,7 @@ export default component$(() => {
 
           <div className="card-author">
             <a className="author-avatar" href="#">
-              <img src="avatar.png" alt="avatar" />
+              <img src="/images/avatar.png" alt="avatar" />
             </a>
             <svg class="half-circle" viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
@@ -154,7 +154,7 @@ export default component$(() => {
 
           <div className="card-author">
             <a className="author-avatar" href="#">
-              <img src="avatar.png" alt="avatar" />
+              <img src="/images/avatar.png" alt="avatar" />
             </a>
             <svg class="half-circle" viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
