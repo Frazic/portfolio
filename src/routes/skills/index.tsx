@@ -10,6 +10,8 @@ export default component$(() => {
   const isTree2Active = useSignal(true);
   const isTree3Active = useSignal(true);
 
+  const setTooltip = useSignal("");
+
   return (
     <>
       <style>
@@ -70,37 +72,30 @@ footer {\
             </h2>
             <TalentColumn
               isActive={isTree2Active.value}
+              setTooltip={setTooltip}
               items={[
                 {
                   name: "Talent 1",
                   iconClass: "fa-solid fa-camera",
-                  tooltip: {
-                    text: "Description of talent 1",
-                    position: "right",
-                  },
+                  tooltip: "Description of talent 1",
                 },
                 { name: "link" },
                 {
                   name: "Talent 2",
                   iconClass: "fa-solid fa-camera",
-                  tooltip: {
-                    text: "Longer description of talent 2",
-                    position: "left",
-                  },
+                  tooltip: "Longer description of talent 2",
                 },
                 { name: "space" },
                 {
                   name: "Talent 3",
                   iconClass: "fa-solid fa-camera",
-                  tooltip: {
-                    text: "Much much longer description of talent 3 that goes into too much details to fit into a reasonable tooltip that is easy to understand",
-                    position: "right",
-                  },
+                  tooltip: "Much much longer description of talent 3 that goes into too much details to fit into a reasonable tooltip that is easy to understand",
                 },
               ]}
             />
             <TalentColumn
               isActive={isTree2Active.value}
+              setTooltip={setTooltip}
               items={[
                 { name: "Talent 1", iconClass: "fa-solid fa-camera" },
                 { name: "empty" },
@@ -142,6 +137,12 @@ footer {\
           </div>
         </div>
       </div>
+
+      <h4 className={"tooltip" + ((setTooltip.value != "" && (isTree1Active.value || isTree2Active.value || isTree3Active.value)) ? " active" : "")}
+        style={(isTree1Active.value || isTree2Active.value || isTree3Active.value) ? {} : { "opacity": "0" }}
+      >
+        Description: <span className={"tooltip-text" + (setTooltip.value != "" ? " active" : "")}>{setTooltip.value}</span>
+      </h4>
     </>
   );
 });

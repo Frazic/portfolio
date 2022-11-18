@@ -81,7 +81,9 @@
   cursor: default;
 }
 
-.talent-column > .talent-item.active:hover {
+.talent-column > .talent-item.active:hover,
+.talent-item.active:active,
+.talent-item.active:focus {
   background: var(--color-purple-mid);
   cursor: help;
 }
@@ -114,36 +116,33 @@
   padding-right: 0.1em;
 }
 
-.talent-item > .talent-tooltip {
+.tooltip {
   max-width: 60ch;
   min-width: 20ch;
+  min-height: 6vh;
   word-break: keep-all;
   padding: 5px 5px;
-  border: 2px dashed var(--color-green-dark);
+  border: 2px dashed var(--color-green-mid);
   border-radius: 0.25em;
   background-color: var(--color-purple-darkest);
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 999;
-  /* left: 105%; */
+  opacity: 0.5;
+  filter: grayscale(1);
 
-  opacity: 0;
-  pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
-.talent-item > .talent-tooltip.left {
-  left: unset;
-  right: 105%;
+.tooltip.active {
+  animation: grayscaleFadeIn 0.5s forwards;
 }
 
-.talent-item > .talent-tooltip.right {
-  left: 105%;
-  right: unset;
+.tooltip-text {
+  font-weight: normal;
+  text-align: justify;
 }
 
-.talent-item.active:hover > .talent-tooltip {
-  animation: fadeIn var(--items-transition-speed) forwards;
+.tooltip.active > .tooltip-text {
+  animation: fadeIn 0.5s forwards;
 }
 
 .talent-column > .active {
@@ -170,6 +169,13 @@
   }
 }
 
+@keyframes grayscaleFadeIn {
+  to {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+}
+
 @media screen and (max-width: 1023px){
   .tree-grid {
     display: flex;
@@ -177,15 +183,22 @@
     width: 80%;
     margin: auto;
   }
+
   .tree-grid > .tree {
     background-image: none;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
+
   .talent-grid > .talent-column {
     display: none;
   }
+
   .talent-grid > .talent-column.active {
     display: flex;
+  }
+
+  .tooltip {
+    margin: auto;
   }
 }

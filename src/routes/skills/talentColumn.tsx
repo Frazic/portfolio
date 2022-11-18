@@ -1,22 +1,20 @@
-import { component$, useStyles$ } from "@builder.io/qwik";
+import { component$, useStyles$, $, Signal } from "@builder.io/qwik";
 import styles from "./skills.css";
 
 export interface TalentColumnProps {
   isActive: boolean;
+  setTooltip?: Signal;
   items: {
     name: string;
     iconClass?: string;
-    tooltip?: {
-      text: string;
-      position: string;
-    };
+    tooltip?: string;
   }[];
 }
 
 export const TalentColumn = component$((props: TalentColumnProps) => {
   useStyles$(styles);
 
-  const createItems$ = () => {
+  const createItems$ = $(() => {
     const items: any[] = [];
     for (let index = 0; index < props.items.length; index++) {
       const item = props.items[index];
@@ -66,16 +64,18 @@ export const TalentColumn = component$((props: TalentColumnProps) => {
               isActive={props.isActive}
               iconClass={item.iconClass}
               tooltip={item.tooltip}
+              setTooltip={props.setTooltip}
             />
           );
           break;
       }
     }
     return items;
-  };
+  });
 
   return (
-    <div className={props.isActive ? "talent-column active" : "talent-column"}>
+    <div className={props.isActive ? "talent-column active" : "talent-column"}
+    >
       {createItems$()}
     </div>
   );
@@ -86,30 +86,37 @@ interface TalentItemProps {
   order: number;
   isActive: boolean;
   iconClass?: string;
-  tooltip?: {
-    text: string;
-    position: string;
-  };
+  setTooltip?: Signal;
+  tooltip?: string;
 }
 
 export const TalentItem = component$((props: TalentItemProps) => {
   useStyles$(styles);
 
+  const onClickItem$ = $(() => {
+    if (props.setTooltip) {
+      if (props.tooltip) {
+        if (props.setTooltip.value != props.tooltip) {
+          props.setTooltip.value = props.tooltip;
+        } else {
+          props.setTooltip.value = "";
+        }
+      } else {
+        props.setTooltip.value = "";
+      }
+    }
+  })
+
   return (
     <div
       style={{ "--order": props.order }}
       className={props.isActive ? "talent-item active" : "talent-item"}
+      onClick$={onClickItem$}
     >
       {
         props.iconClass && <i class={props.iconClass + ""}></i> // For some reason withtout the "" this causes Qwik to crash
       }
       <span>{props.name}</span>
-
-      {props.tooltip && (
-        <span className={"talent-tooltip " + props.tooltip.position}>
-          {props.tooltip.text}
-        </span>
-      )}
     </div>
   );
 });
