@@ -106,7 +106,7 @@ export default component$(() => {
 
       <img
         className="home-page-photo"
-        src="/images/josh-photo.webp"
+        src="josh-photo.webp"
         alt="Picture of Joshua Bruylant"
         loading="lazy"
       />
