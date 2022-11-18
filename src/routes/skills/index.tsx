@@ -1,7 +1,12 @@
-import { component$, useSignal, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useSignal, useStore, useStylesScoped$ } from "@builder.io/qwik";
 import { DocumentHead } from "@builder.io/qwik-city";
 import styles from "./skills.css";
 import { TalentColumn } from "./talentColumn";
+
+export interface TooltipStore {
+  text: string;
+  title: string;
+}
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -10,7 +15,10 @@ export default component$(() => {
   const isTree2Active = useSignal(true);
   const isTree3Active = useSignal(true);
 
-  const setTooltip = useSignal("");
+  const tooltipStore = useStore<TooltipStore>({
+    text: "",
+    title: ""
+  });
 
   return (
     <>
@@ -72,7 +80,7 @@ footer {\
             </h2>
             <TalentColumn
               isActive={isTree2Active.value}
-              setTooltip={setTooltip}
+              tooltipStore={tooltipStore}
               items={[
                 {
                   name: "Talent 1",
@@ -95,7 +103,7 @@ footer {\
             />
             <TalentColumn
               isActive={isTree2Active.value}
-              setTooltip={setTooltip}
+              tooltipStore={tooltipStore}
               items={[
                 { name: "Talent 1", iconClass: "fa-solid fa-camera" },
                 { name: "empty" },
@@ -138,10 +146,10 @@ footer {\
         </div>
       </div>
 
-      <h4 className={"tooltip" + ((setTooltip.value != "" && (isTree1Active.value || isTree2Active.value || isTree3Active.value)) ? " active" : "")}
+      <h4 className={"tooltip" + ((tooltipStore.text != "" && (isTree1Active.value || isTree2Active.value || isTree3Active.value)) ? " active" : "")}
         style={(isTree1Active.value || isTree2Active.value || isTree3Active.value) ? {} : { "opacity": "0" }}
       >
-        Description: <span className={"tooltip-text" + (setTooltip.value != "" ? " active" : "")}>{setTooltip.value}</span>
+        <span className={"tooltip-text" + (tooltipStore.text != "" ? " active" : "")}><b>{tooltipStore.title != "" ? tooltipStore.title + ":" : ""}</b> {tooltipStore.text}</span>
       </h4>
     </>
   );

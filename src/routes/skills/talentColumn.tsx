@@ -1,9 +1,10 @@
-import { component$, useStyles$, $, Signal } from "@builder.io/qwik";
+import { component$, useStyles$, $ } from "@builder.io/qwik";
+import { TooltipStore } from ".";
 import styles from "./skills.css";
 
 export interface TalentColumnProps {
   isActive: boolean;
-  setTooltip?: Signal;
+  tooltipStore?: TooltipStore;
   items: {
     name: string;
     iconClass?: string;
@@ -64,7 +65,7 @@ export const TalentColumn = component$((props: TalentColumnProps) => {
               isActive={props.isActive}
               iconClass={item.iconClass}
               tooltip={item.tooltip}
-              setTooltip={props.setTooltip}
+              tooltipStore={props.tooltipStore}
             />
           );
           break;
@@ -86,23 +87,26 @@ interface TalentItemProps {
   order: number;
   isActive: boolean;
   iconClass?: string;
-  setTooltip?: Signal;
   tooltip?: string;
+  tooltipStore?: TooltipStore
 }
 
 export const TalentItem = component$((props: TalentItemProps) => {
   useStyles$(styles);
 
   const onClickItem$ = $(() => {
-    if (props.setTooltip) {
+    if (props.tooltipStore) {
       if (props.tooltip) {
-        if (props.setTooltip.value != props.tooltip) {
-          props.setTooltip.value = props.tooltip;
+        if (props.tooltipStore.text != props.tooltip) {
+          props.tooltipStore.text = props.tooltip;
+          props.tooltipStore.title = props.name;
         } else {
-          props.setTooltip.value = "";
+          props.tooltipStore.text = "";
+          props.tooltipStore.title = "";
         }
       } else {
-        props.setTooltip.value = "";
+        props.tooltipStore.text = "";
+        props.tooltipStore.title = "";
       }
     }
   })
