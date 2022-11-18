@@ -20,7 +20,7 @@
     "serve": "wrangler pages dev ./dist",
     "start": "vite --open --mode ssr",
     "qwik": "qwik",
-    "deploy": "npm run build && npm run build.server && node server/entry.ssr.js ./dist/projects/avatar.png &&http-server ./dist"
+    "deploy": "npm run build && npm run build.server && node server/entry.ssr.js && http-server ./dist"
   },
   "devDependencies": {
     "@builder.io/qwik": "0.12.1",
