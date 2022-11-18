@@ -75,8 +75,7 @@ export const TalentColumn = component$((props: TalentColumnProps) => {
   });
 
   return (
-    <div className={props.isActive ? "talent-column active" : "talent-column"}
-    >
+    <div className={props.isActive ? "talent-column active" : "talent-column"}>
       {createItems$()}
     </div>
   );
@@ -88,7 +87,7 @@ interface TalentItemProps {
   isActive: boolean;
   iconClass?: string;
   tooltip?: string;
-  tooltipStore?: TooltipStore
+  tooltipStore?: TooltipStore;
 }
 
 export const TalentItem = component$((props: TalentItemProps) => {
@@ -109,7 +108,7 @@ export const TalentItem = component$((props: TalentItemProps) => {
         props.tooltipStore.title = "";
       }
     }
-  })
+  });
 
   return (
     <div
