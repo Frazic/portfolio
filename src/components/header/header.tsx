@@ -8,8 +8,7 @@ export default component$(() => {
     <header>
       <a href="/">
         <div className="title">
-          <i class="fa-solid fa-house fa-xs" />
-          <span>Joshua Bruylant</span>
+          <span>🏠 Joshua Bruylant</span>
         </div>
       </a>
     </header>

@@ -27,11 +27,6 @@ export const RouterHead = component$(() => {
       {/* <meta name="twitter:site" content="@Frazic" /> */}
       {/* <meta name="twitter:title" content="Frazic" /> */}
 
-      <script
-        src="https://kit.fontawesome.com/3b1cc2bcf4.js"
-        crossOrigin="anonymous"
-      ></script>
-
       {head.meta.map((m) => (
         <meta {...m} />
       ))}

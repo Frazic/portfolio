@@ -5,7 +5,7 @@ import {
   useStylesScoped$,
 } from "@builder.io/qwik";
 import { DocumentHead } from "@builder.io/qwik-city";
-import styles from "./skills.css";
+import styles from "./skills.css?inline";
 import { TalentColumn } from "./talentColumn";
 
 export interface TooltipStore {
@@ -156,7 +156,7 @@ footer {\
         className={
           "tooltip" +
           (tooltipStore.text != "" &&
-          (isTree1Active.value || isTree2Active.value || isTree3Active.value)
+            (isTree1Active.value || isTree2Active.value || isTree3Active.value)
             ? " active"
             : "")
         }

@@ -36,8 +36,3 @@ lerna-debug.log*
 # Yarn
 .yarn/*
 !.yarn/releases
-
-# Cloudflare
-functions/**/*.js
-
-public/images/hashes.json

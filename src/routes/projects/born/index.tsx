@@ -1,5 +1,5 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
-import styles from "../projects.css";
+import styles from "../projects.css?inline";
 
 export default component$(() => {
   useStyles$(styles);

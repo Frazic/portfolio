@@ -1,6 +1,6 @@
 import { component$, useStyles$, $ } from "@builder.io/qwik";
 import { TooltipStore } from ".";
-import styles from "./skills.css";
+import style from "./skills.css?inline";
 
 export interface TalentColumnProps {
   isActive: boolean;
@@ -13,7 +13,7 @@ export interface TalentColumnProps {
 }
 
 export const TalentColumn = component$((props: TalentColumnProps) => {
-  useStyles$(styles);
+  useStyles$(style);
 
   const createItems$ = $(() => {
     const items: any[] = [];
@@ -26,34 +26,40 @@ export const TalentColumn = component$((props: TalentColumnProps) => {
       switch (item.name) {
         case "link":
           items.push(
-            <div
-              style={{ "--order": order }}
-              className={props.isActive ? "talent-link active" : "talent-link"}
-            >
-              <div className="link-line"></div>
-            </div>
+            <>
+              <div
+                style={{ "--order": order }}
+                className={props.isActive ? "talent-link active" : "talent-link"}
+              >
+                <div className="link-line"></div>
+              </div>
+            </>
           );
           break;
 
         case "space":
           items.push(
-            <div
-              style={{ "--order": order }}
-              className={
-                props.isActive ? "talent-space active" : "talent-space"
-              }
-            ></div>
+            <>
+              <div
+                style={{ "--order": order }}
+                className={
+                  props.isActive ? "talent-space active" : "talent-space"
+                }
+              ></div>
+            </>
           );
           break;
 
         case "empty":
           items.push(
-            <div
-              style={{ "--order": order }}
-              className={
-                props.isActive ? "talent-empty active" : "talent-empty"
-              }
-            ></div>
+            <>
+              <div
+                style={{ "--order": order }}
+                className={
+                  props.isActive ? "talent-empty active" : "talent-empty"
+                }
+              ></div>
+            </>
           );
           break;
 
@@ -75,9 +81,11 @@ export const TalentColumn = component$((props: TalentColumnProps) => {
   });
 
   return (
-    <div className={props.isActive ? "talent-column active" : "talent-column"}>
-      {createItems$()}
-    </div>
+    <>
+      <div className={props.isActive ? "talent-column active" : "talent-column"}>
+        {createItems$()}
+      </div>
+    </>
   );
 });
 
@@ -91,7 +99,7 @@ interface TalentItemProps {
 }
 
 export const TalentItem = component$((props: TalentItemProps) => {
-  useStyles$(styles);
+  useStyles$(style);
 
   const onClickItem$ = $(() => {
     if (props.tooltipStore) {
@@ -111,15 +119,17 @@ export const TalentItem = component$((props: TalentItemProps) => {
   });
 
   return (
-    <div
-      style={{ "--order": props.order }}
-      className={props.isActive ? "talent-item active" : "talent-item"}
-      onClick$={onClickItem$}
-    >
-      {
-        props.iconClass && <i class={props.iconClass + ""}></i> // For some reason withtout the "" this causes Qwik to crash
-      }
-      <span>{props.name}</span>
-    </div>
+    <>
+      <div
+        style={{ "--order": props.order }}
+        className={props.isActive ? "talent-item active" : "talent-item"}
+        onClick$={onClickItem$}
+      >
+        {
+          props.iconClass && <i class={props.iconClass + ""}></i> // For some reason withtout the "" this causes Qwik to crash
+        }
+        <span>{props.name}</span>
+      </div>
+    </>
   );
 });
